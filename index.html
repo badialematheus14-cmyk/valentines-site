@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#0F172A">
+  <meta name="description" content="Uma experiência especial de Dia dos Namorados — Para Estephanie ❤️">
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:title" content="Para Estephanie ❤️">
+  <meta property="og:description" content="Uma jornada especial criada só para você">
+  <title>Para Estephanie ❤️ — Feliz Dia dos Namorados</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app" id="app">
+
+  <!-- ══════════════════════════════════════════════════════
+       TELA 1 — LOCK SCREEN
+       ══════════════════════════════════════════════════════
+       Foto de fundo: assets/images/lock-bg.jpg
+       Tamanho recomendado: 1080×1920px (portrait)
+       Para substituir: edite a propriedade background-image
+       no arquivo css/style.css na classe .lock-bg
+  ════════════════════════════════════════════════════════ -->
+  <div id="lock-screen" class="lock-screen">
+
+    <!--
+      FOTO DE FUNDO DA LOCK SCREEN
+      Para trocar: adicione sua foto em assets/images/lock-bg.jpg
+      A classe .lock-bg no CSS referencia esse arquivo.
+    -->
+    <div class="lock-bg" id="lock-bg"></div>
+    <div class="lock-vignette"></div>
+
+    <!-- Topo: Relógio -->
+    <div class="lock-top">
+      <div class="lock-time" id="lock-time">00:00</div>
+      <div class="lock-date" id="lock-date">carregando...</div>
+    </div>
+
+    <!-- Centro: Notificação -->
+    <div class="lock-notification">
+      <div class="notif-icon-wrap">
+        <span class="notif-icon-letter">M</span>
+      </div>
+      <div class="notif-body">
+        <p class="notif-sender">Matheus</p>
+        <p class="notif-msg">Você recebeu uma mensagem especial ❤️</p>
+      </div>
+      <span class="notif-time">agora</span>
+    </div>
+
+    <!-- Rodapé: Botão de entrada -->
+    <div class="lock-bottom">
+      <button class="lock-btn" id="lock-btn" aria-label="Abrir Nossa História">
+        <span class="lock-btn-label">Abrir Nossa História</span>
+        <span class="lock-btn-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </span>
+      </button>
+      <p class="lock-hint">toque para começar</p>
+    </div>
+  </div><!-- /lock-screen -->
+
+
+  <!-- ══════════════════════════════════════════════════════
+       EXPERIENCE — TELAS 2 A 12
+  ════════════════════════════════════════════════════════ -->
+  <div id="experience" class="experience is-hidden" aria-hidden="true">
+
+    <!-- ── Progress Bar (estilo Instagram Stories) ── -->
+    <nav class="stories-bar" id="stories-bar" aria-label="Progresso da história">
+      <!-- Gerado por JavaScript -->
+    </nav>
+
+    <!-- ── Setas de navegação (desktop) ── -->
+    <button class="nav-arrow nav-left" id="nav-left" aria-label="Slide anterior">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="22" height="22">
+        <polyline points="15 18 9 12 15 6"/>
+      </svg>
+    </button>
+    <button class="nav-arrow nav-right" id="nav-right" aria-label="Próximo slide">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="22" height="22">
+        <polyline points="9 18 15 12 9 6"/>
+      </svg>
+    </button>
+
+    <!-- ── Slides Track ── -->
+    <div class="slides-track" id="slides-track">
+
+
+      <!-- ══════════════════════════════════════════════════════
+           SLIDE 0 (Tela 2) — FELIZ DIA DOS NAMORADOS
+      ════════════════════════════════════════════════════════ -->
+      <section class="slide" id="slide-valentines" data-index="0" aria-label="Feliz Dia dos Namorados">
+        <div class="slide-bg bg-valentines"></div>
+        <div class="particles-wrap" id="particles-wrap"></div>
+        <div class="slide-center">
+          <div class="valentines-content">
+            <div class="heart-glow" aria-hidden="true">♥</div>
+            <h1 class="valentines-title">
+              Feliz Dia dos<br><em>Namorados</em>
+            </h1>
+            <div class="v-divider"></div>
+            <p class="valentines-name">Estephanie</p>
+            <p class="valentines-love">Com todo o meu amor</p>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ══════════════════════════════════════════════════════
+           SLIDE 1 (Tela 3) — CONTADOR EM TEMPO REAL
+      ════════════════════════════════════════════════════════ -->
+      <section class="slide" id="slide-counter" data-index="1" aria-label="Contador de tempo juntos">
+        <div class="slide-bg bg-space"></div>
+        <div class="ambient-stars" id="ambient-stars"></div>
+        <div class="slide-inner">
+          <header class="slide-header">
+            <p class="eyebrow">nosso amor em tempo real</p>
+            <h2 class="slide-title">Juntos há...</h2>
+          </header>
+
+          <div class="counter-grid" id="counter-grid">
+            <div class="counter-card">
+              <span class="counter-val" id="count-years">00</span>
+              <span class="counter-lbl">anos</span>
+            </div>
+            <div class="counter-card">
+              <span class="counter-val" id="count-months">00</span>
+              <span class="counter-lbl">meses</span>
+            </div>
+            <div class="counter-card">
+              <span class="counter-val" id="count-days">00</span>
+              <span class="counter-lbl">dias</span>
+            </div>
+            <div class="counter-card">
+              <span class="counter-val" id="count-hours">00</span>
+              <span class="counter-lbl">horas</span>
+            </div>
+            <div class="counter-card">
+              <span class="counter-val" id="count-minutes">00</span>
+              <span class="counter-lbl">minutos</span>
+            </div>
+            <div class="counter-card counter-seconds">
+              <span class="counter-val" id="count-seconds">00</span>
+              <span class="counter-lbl">segundos</span>
+            </div>
+          </div>
+
+          <footer class="counter-footer">
+            <p class="counter-note">Nossa história começou em <strong>02/03/2024</strong></p>
+            <p class="counter-sub">e desde <strong>17/05/2024</strong> somos oficialmente namorados ❤️</p>
+          </footer>
+        </div>
+      </section>
+
+
+      <!-- ══════════════════════════════════════════════════════
+           SLIDE 2 (Tela 4) — COMO TUDO COMEÇOU
+           Fotos: assets/images/beginning-1.jpg até beginning-4.jpg
+           Tamanho: 800×1000px (portrait)
+      ════════════════════════════════════════════════════════ -->
+      <section class="slide" id="slide-beginning" data-index="2" aria-label="Como tudo começou">
+        <div class="slide-bg bg-warm"></div>
+        <div class="slide-inner">
+          <header class="slide-header">
+            <p class="eyebrow">02 de março de 2024</p>
+            <h2 class="slide-title">Como Tudo<br>Começou</h2>
+          </header>
+
+          <p class="scroll-hint">← deslize as fotos →</p>
+
+          <!--
+            GALERIA — COMO TUDO COMEÇOU
+            Para adicionar fotos:
+            1. Copie para assets/images/beginning-1.jpg (até beginning-4.jpg)
+            2. O <img> já referencia os arquivos — ao adicionar a foto,
+               ela aparecerá automaticamente sobre o placeholder colorido.
+          -->
+          <div class="gallery-h" id="gallery-beginning">
+
+            <div class="photo-card" onclick="openLightbox('assets/images/beginning-1.jpg','02/03/2024 — O dia que tudo começou')">
+              <!-- FOTO: assets/images/beginning-1.jpg -->
+              <div class="photo-inner" style="--ph-color-a:#F5C2D7;--ph-color-b:#C9A0BF;">
+                <img src="assets/images/beginning-1.jpg" alt="Como tudo começou — foto 1" loading="lazy" class="photo-img" onerror="this.style.display='none'">
+                <div class="photo-ph"><span>📸</span><small>beginning-1.jpg</small></div>
+              </div>
+              <p class="photo-cap">02/03/2024</p>
+            </div>
+
+            <div class="photo-card" onclick="openLightbox('assets/images/beginning-2.jpg','O início da nossa história')">
+              <!-- FOTO: assets/images/beginning-2.jpg -->
+              <div class="photo-inner" style="--ph-color-a:#C9A0BF;--ph-color-b:#8B6E9F;">
+                <img src="assets/images/beginning-2.jpg" alt="Como tudo começou — foto 2" loading="lazy" class="photo-img" onerror="this.style.display='none'">
+                <div class="photo-ph"><span>📸</span><small>beginning-2.jpg</small></div>
+              </div>
+              <p class="photo-cap">O início</p>
+            </div>
+
+            <div class="photo-card" onclick="openLightbox('assets/images/beginning-3.jpg','Aquele dia especial')">
+              <!-- FOTO: assets/images/beginning-3.jpg -->
+              <div class="photo-inner" style="--ph-color-a:#8B6E9F;--ph-color-b:#5A3D7A;">
+                <img src="assets/images/beginning-3.jpg" alt="Como tudo começou — foto 3" loading="lazy" class="photo-img" onerror="this.style.display='none'">
+                <div class="photo-ph"><span>📸</span><small>beginning-3.jpg</small></div>
+              </div>
+              <p class="photo-cap">Aquele dia</p>
+            </div>
+
+            <div class="photo-card" onclick="openLightbox('assets/images/beginning-4.jpg','A primeira vez que ficamos juntos')">
+              <!-- FOTO: assets/images/beginning-4.jpg -->
+              <div class="photo-inner" style="--ph-color-a:#E8A0C0;--ph-color-b:#F5C2D7;">
+                <img src="assets/images/beginning-4.jpg" alt="Como tudo começou — foto 4" loading="lazy" class="photo-img" onerror="this.style.display='none'">
+                <div class="photo-ph"><span>📸</span><small>beginning-4.jpg</small></div>
+              </div>
+              <p class="photo-cap">Juntos</p>
+            </div>
+
+          </div><!-- /gallery-h -->
+        </div>
+      </section>
+
+
+      <!-- ══════════════════════════════════════════════════════
+           SLIDE 3 (Tela 5) — PRIMEIRO ANO
+           Fotos: assets/images/year1-1.jpg até year1-3.jpg
+      ════════════════════════════════════════════════════════ -->
+      <section class="slide" id="slide-firstyear" data-index="3" aria-label="Nosso primeiro ano">
+        <div class="slide-bg bg-firstyear"></div>
+        <div class="slide-inner">
+          <header class="slide-header">
+            <p class="eyebrow">maio 2024 — maio 2025</p>
+            <h2 class="slide-title">Nosso<br>Primeiro Ano</h2>
+          </header>
+
+          <!--
+            GALERIA — PRIMEIRO ANO
+            Para adicionar fotos:
+            Copie para assets/images/year1-1.jpg, year1-2.jpg, year1-3.jpg
+          -->
+          <div class="firstyear-grid">
+
+            <div class="fy-card fy-large" onclick="openLightbox('assets/images/year1-1.jpg','Nosso primeiro ano juntos')">
+              <!-- FOTO PRINCIPAL: assets/images/year1-1.jpg -->
+              <div class="photo-inner" style="--ph-color-a:#1E3A5F;--ph-color-b:#0F172A;">
+                <img src="assets/images/year1-1.jpg" alt="Primeiro ano — foto principal" loading="lazy" class="photo-img" onerror="this.style.display='none'">
+                <div class="photo-ph"><span>📸</span><small>year1-1.jpg</small></div>
+              </div>
+              <div class="fy-overlay">
+                <span class="fy-badge">✦ A melhor fase</span>
+              </div>
+            </div>
+
+            <div class="fy-col">
+              <div class="fy-card" onclick="openLightbox('assets/images/year1-2.jpg','Momentos inesquecíveis')">
+                <!-- FOTO: assets/images/year1-2.jpg -->
+                <div class="photo-inner" style="--ph-color-a:#2D1B3D;--ph-color-b:#1a0f2e;">
+                  <img src="assets/images/year1-2.jpg" alt="Primeiro ano — foto 2" loading="lazy" class="photo-img" onerror="this.style.display='none'">
+                  <div class="photo-ph"><span>📸</span><small>year1-2.jpg</small></div>
+                </div>
+              </div>
+
+              <div class="fy-card" onclick="openLightbox('assets/images/year1-3.jpg','Crescendo juntos')">
+                <!-- FOTO: assets/images/year1-3.jpg -->
+                <div class="photo-inner" style="--ph-color-a:#3D1B2D;--ph-color-b:#2a0f1e;">
+                  <img src="assets/images/year1-3.jpg" alt="Primeiro ano — foto 3" loading="lazy" class="photo-img" onerror="this.style.display='none'">
+                  <div class="photo-ph"><span>📸</span><small>year1-3.jpg</small></div>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /firstyear-grid -->
+        </div>
+      </section>
+
+
+      <!-- ══════════════════════════════════════════════════════
+           SLIDE 4 (Tela 6) — MOMENTOS FAVORITOS
+           Fotos: assets/images/moment-1.jpg até moment-6.jpg
+      ════════════════════════════════════════════════════════ -->
+      <section class="slide" id="slide-favorites" data-index="4" aria-label="Momentos favoritos">
+        <div class="slide-bg bg-favorites"></div>
+        <div class="slide-inner">
+          <header class="slide-header">
+            <p class="eyebrow">guardados no coração</p>
+            <h2 class="slide-title">Momentos<br>Favoritos</h2>
+          </header>
+
+          <!--
+            GRID — MOMENTOS FAVORITOS
+            Para adicionar fotos:
+            Copie para assets/images/moment-1.jpg até moment-6.jpg
+            Toque/clique numa foto para ampliar (lightbox).
+          -->
+          <div class="moments-grid">
+
+            <div class="moment-item" onclick="openLightbox('assets/images/moment-1.jpg','Momento favorito')">
+              <!-- FOTO: assets/images/moment-1.jpg -->
+              <div class="photo-inner" style="--ph-color-a:#F5C2D7;--ph-color-b:#C9A0BF;">
+                <img src="assets/images/moment-1.jpg" alt="Momento favorito 1" loading="lazy" class="photo-img" onerror="this.style.display='none'">
+                <div class="photo-ph"><span>📸</span></div>
+              </div>
+            </div>
+
+            <div class="moment-item moment-tall" onclick="openLightbox('assets/images/moment-2.jpg','Memória especial')">
+              <!-- FOTO: assets/images/moment-2.jpg -->
+              <div class="photo-inner" style="--ph-color-a:#C9A0BF;--ph-color-b:#8B6E9F;">
+                <img src="assets/images/moment-2.jpg" alt="Momento favorito 2" loading="lazy" class="photo-img" onerror="this.style.display='none'">
+                <div class="photo-ph"><span>📸</span></div>
+              </div>
+            </div>
+
+            <div class="moment-item" onclick="openLightbox('assets/images/moment-3.jpg','Instante único')">
+              <!-- FOTO: assets/images/moment-3.jpg -->
+              <div class="photo-inner" style="--ph-color-a:#8B6E9F;--ph-color-b:#5A3D7A;">
+                <img src="assets/images/moment-3.jpg" alt="Momento favorito 3" loading="lazy" class="photo-img" onerror="this.style.display='none'">
+                <div class="photo-ph"><span>📸</span></div>
+              </div>
+            </div>
+
+            <div class="moment-item moment-wide" onclick="openLightbox('assets/images/moment-4.jpg','Juntos sempre')">
+              <!-- FOTO: assets/images/moment-4.jpg -->
+              <div class="photo-inner" style="--ph-color-a:#5A3D7A;--ph-color-b:#3D1B5A;">
+                <img src="assets/images/moment-4.jpg" alt="Momento favorito 4" loading="lazy" class="photo-img" onerror="this.style.display='none'">
+                <div class="photo-ph"><span>📸</span></div>
+              </div>
+            </div>
+
+            <div class="moment-item" onclick="openLightbox('assets/images/moment-5.jpg','Nossa luz')">
+              <!-- FOTO: assets/images/moment-5.jpg -->
+              <div class="photo-inner" style="--ph-color-a:#F5C2D7;--ph-color-b:#E8A0C0;">
+                <img src="assets/images/moment-5.jpg" alt="Momento favorito 5" loading="lazy" class="photo-img" onerror="this.style.display='none'">
+                <div class="photo-ph"><span>📸</span></div>
+              </div>
+            </div>
+
+            <div class="moment-item" onclick="openLightbox('assets/images/moment-6.jpg','Felicidade')">
+              <!-- FOTO: assets/images/moment-6.jpg -->
+              <div class="photo-inner" style="--ph-color-a:#E8A0C0;--ph-color-b:#D480A0;">
+                <img src="assets/images/moment-6.jpg" alt="Momento favorito 6" loading="lazy" class="photo-img" onerror="this.style.display='none'">
+                <div class="photo-ph"><span>📸</span></div>
+              </div>
+            </div>
+
+          </div><!-- /moments-grid -->
+        </div>
+      </section>
+
+
+      <!-- ══════════════════════════════════════════════════════
+           SLIDE 5 (Tela 7) — VIAGENS
+           Fotos: assets/images/travel-1.jpg, travel-2.jpg, travel-3.jpg
+           Thumbs de vídeo: assets/images/travel-thumb-1.jpg
+           Vídeo: assets/videos/travel-1.mp4
+      ════════════════════════════════════════════════════════ -->
+      <section class="slide" id="slide-travels" data-index="5" aria-label="Nossas viagens">
+        <div class="slide-bg bg-travel"></div>
+        <div class="slide-inner">
+          <header class="slide-header">
+            <p class="eyebrow">aventuras juntos</p>
+            <h2 class="slide-title">Nossas<br>Viagens</h2>
+          </header>
+
+          <!--
+            GRID PINTEREST — VIAGENS
+            Para fotos: copie para assets/images/travel-X.jpg
+            Para vídeos: copie para assets/videos/travel-X.mp4
+                         e o thumbnail para assets/images/travel-thumb-X.jpg
+            Cards de vídeo têm um ícone ▶ — ao clicar abrem o modal de vídeo.
+          -->
+          <div class="pinterest-grid">
+
+            <div class="pin-col">
+
+              <div class="pin-item" onclick="openLightbox('assets/images/travel-1.jpg','Nossa viagem')">
+                <!-- FOTO: assets/images/travel-1.jpg -->
+                <div class="photo-inner pin-tall" style="--ph-color-a:#1a3a5c;--ph-color-b:#2d5986;">
+                  <img src="assets/images/travel-1.jpg" alt="Viagem 1" loading="lazy" class="photo-img" onerror="this.style.display='none'">
+                  <div class="photo-ph"><span>📍</span><small>travel-1.jpg</small></div>
+                </div>
+                <p class="pin-label">Destino 1</p>
+              </div>
+
+              <div class="pin-item" onclick="openLightbox('assets/images/travel-2.jpg','Mais aventuras')">
+                <!-- FOTO: assets/images/travel-2.jpg -->
+                <div class="photo-inner" style="--ph-color-a:#3d2a1a;--ph-color-b:#6b4e2a;">
+                  <img src="assets/images/travel-2.jpg" alt="Viagem 2" loading="lazy" class="photo-img" onerror="this.style.display='none'">
+                  <div class="photo-ph"><span>📍</span><small>travel-2.jpg</small></div>
+                </div>
+                <p class="pin-label">Destino 2</p>
+              </div>
+
+            </div><!-- /pin-col -->
+
+            <div class="pin-col">
+
+              <!--
+                VÍDEO DE VIAGEM:
+                Substitua travel-thumb-1.jpg pelo thumbnail e travel-1.mp4 pelo vídeo.
+              -->
+              <div class="pin-item pin-video" onclick="openVideoModal('assets/videos/travel-1.mp4','Nossa aventura em vídeo')">
+                <!-- VIDEO THUMB: assets/images/travel-thumb-1.jpg -->
+                <div class="photo-inner" style="--ph-color-a:#2d1b3d;--ph-color-b:#4a2d6f;">
+                  <img src="assets/images/travel-thumb-1.jpg" alt="Vídeo de viagem" loading="lazy" class="photo-img" onerror="this.style.display='none'">
+                  <div class="photo-ph"><span>🎬</span><small>travel-thumb-1.jpg</small></div>
+                  <div class="video-play-badge">▶</div>
+                </div>
+                <p class="pin-label">Vídeo especial</p>
+              </div>
+
+              <div class="pin-item" onclick="openLightbox('assets/images/travel-3.jpg','Lugar especial')">
+                <!-- FOTO: assets/images/travel-3.jpg -->
+                <div class="photo-inner pin-medium" style="--ph-color-a:#1a3d2a;--ph-color-b:#2a6b4e;">
+                  <img src="assets/images/travel-3.jpg" alt="Viagem 3" loading="lazy" class="photo-img" onerror="this.style.display='none'">
+                  <div class="photo-ph"><span>📍</span><small>travel-3.jpg</small></div>
+                </div>
+                <p class="pin-label">Destino 3</p>
+              </div>
+
+            </div><!-- /pin-col -->
+          </div><!-- /pinterest-grid -->
+        </div>
+      </section>
+
+
+      <!-- ══════════════════════════════════════════════════════
+           SLIDE 6 (Tela 8) — VÍDEOS
+           Vídeos: assets/videos/video-1.mp4, video-2.mp4, video-3.mp4
+           Thumbnails: assets/images/video-thumb-1.jpg, etc.
+      ════════════════════════════════════════════════════════ -->
+      <section class="slide" id="slide-videos" data-index="6" aria-label="Nossos vídeos">
+        <div class="slide-bg bg-cinema"></div>
+        <div class="slide-inner">
+          <header class="slide-header">
+            <p class="eyebrow">momentos em movimento</p>
+            <h2 class="slide-title">Nossos<br>Vídeos</h2>
+          </header>
+
+          <!--
+            VÍDEOS
+            Para cada vídeo:
+            1. Adicione o arquivo .mp4 em assets/videos/video-X.mp4
+            2. Adicione o thumbnail em assets/images/video-thumb-X.jpg
+            3. Atualize o título e a data abaixo de cada card.
+            O player nativo do navegador será usado — funciona em todos os celulares.
+          -->
+          <div class="video-cards-wrap">
+
+            <div class="video-card">
+              <div class="video-thumb-wrap">
+                <!--
+                  VÍDEO 1
+                  src: assets/videos/video-1.mp4
+                  poster: assets/images/video-thumb-1.jpg
+                -->
+                <video
+                  class="video-el"
+                  poster="assets/images/video-thumb-1.jpg"
+                  preload="none"
+                  playsinline
+                  id="video-el-0">
+                  <source src="assets/videos/video-1.mp4" type="video/mp4">
+                </video>
+                <div class="video-ph-icon">🎬</div>
+                <div class="video-play-overlay" data-vid-idx="0">
+                  <button class="big-play" aria-label="Reproduzir vídeo 1">
+                    <svg viewBox="0 0 24 24" width="40" height="40">
+                      <polygon points="5 3 19 12 5 21 5 3" fill="currentColor"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="video-card-info">
+                <!-- Edite o título e data do vídeo 1 abaixo -->
+                <p class="video-title-lbl">Vídeo especial 1</p>
+                <p class="video-date-lbl"><!-- ex: Dezembro 2024 --></p>
+              </div>
+            </div>
+
+            <div class="video-card">
+              <div class="video-thumb-wrap">
+                <!--
+                  VÍDEO 2
+                  src: assets/videos/video-2.mp4
+                  poster: assets/images/video-thumb-2.jpg
+                -->
+                <video
+                  class="video-el"
+                  poster="assets/images/video-thumb-2.jpg"
+                  preload="none"
+                  playsinline
+                  id="video-el-1">
+                  <source src="assets/videos/video-2.mp4" type="video/mp4">
+                </video>
+                <div class="video-ph-icon">🎬</div>
+                <div class="video-play-overlay" data-vid-idx="1">
+                  <button class="big-play" aria-label="Reproduzir vídeo 2">
+                    <svg viewBox="0 0 24 24" width="40" height="40">
+                      <polygon points="5 3 19 12 5 21 5 3" fill="currentColor"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="video-card-info">
+                <!-- Edite o título e data do vídeo 2 abaixo -->
+                <p class="video-title-lbl">Vídeo especial 2</p>
+                <p class="video-date-lbl"><!-- ex: Fevereiro 2025 --></p>
+              </div>
+            </div>
+
+            <div class="video-card">
+              <div class="video-thumb-wrap">
+                <!--
+                  VÍDEO 3
+                  src: assets/videos/video-3.mp4
+                  poster: assets/images/video-thumb-3.jpg
+                -->
+                <video
+                  class="video-el"
+                  poster="assets/images/video-thumb-3.jpg"
+                  preload="none"
+                  playsinline
+                  id="video-el-2">
+                  <source src="assets/videos/video-3.mp4" type="video/mp4">
+                </video>
+                <div class="video-ph-icon">🎬</div>
+                <div class="video-play-overlay" data-vid-idx="2">
+                  <button class="big-play" aria-label="Reproduzir vídeo 3">
+                    <svg viewBox="0 0 24 24" width="40" height="40">
+                      <polygon points="5 3 19 12 5 21 5 3" fill="currentColor"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="video-card-info">
+                <!-- Edite o título e data do vídeo 3 abaixo -->
+                <p class="video-title-lbl">Vídeo especial 3</p>
+                <p class="video-date-lbl"><!-- ex: Maio 2025 --></p>
+              </div>
+            </div>
+
+          </div><!-- /video-cards-wrap -->
+        </div>
+      </section>
+
+
+      <!-- ══════════════════════════════════════════════════════
+           SLIDE 7 (Tela 9) — LOVER (PLAYER DE MÚSICA)
+           Música: assets/music/lover.mp3
+           Capa: assets/images/lover-cover.jpg (500×500px)
+      ════════════════════════════════════════════════════════ -->
+      <section class="slide" id="slide-music" data-index="7" aria-label="Nossa música — Lover">
+        <div class="slide-bg bg-music"></div>
+        <div class="music-ambient-blur" id="music-ambient"></div>
+        <div class="slide-center">
+          <div class="music-player">
+
+            <!-- Capa / Vinil -->
+            <div class="vinyl-wrap">
+              <div class="vinyl-disc" id="vinyl-disc">
+                <!--
+                  CAPA DO ÁLBUM:
+                  Adicione em: assets/images/lover-cover.jpg
+                  Tamanho recomendado: 500×500px (quadrado)
+                -->
+                <img
+                  src="assets/images/lover-cover.jpg"
+                  alt="Lover — Taylor Swift"
+                  id="album-art"
+                  class="album-art-img"
+                  loading="lazy"
+                  onerror="this.style.display='none'">
+                <div class="album-art-ph" id="album-art-ph">♪</div>
+              </div>
+            </div>
+
+            <!-- Info da música -->
+            <div class="song-info">
+              <h2 class="song-name">Lover</h2>
+              <p class="song-artist">Taylor Swift</p>
+            </div>
+
+            <!-- Barra de progresso -->
+            <div class="player-prog-wrap">
+              <span class="player-time" id="player-time-cur">0:00</span>
+              <div class="player-prog-track" id="player-prog-track" role="slider"
+                   aria-label="Progresso da música" tabindex="0">
+                <div class="player-prog-fill" id="player-prog-fill"></div>
+                <div class="player-prog-thumb" id="player-prog-thumb"></div>
+              </div>
+              <span class="player-time" id="player-time-tot">3:41</span>
+            </div>
+
+            <!-- Controles -->
+            <div class="player-ctrls">
+              <button class="ctrl-btn ctrl-sm" id="ctrl-rewind" aria-label="Reiniciar">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
+                  <polyline points="1 4 1 10 7 10"/>
+                  <path d="M3.51 15a9 9 0 1 0 .49-3.8"/>
+                </svg>
+              </button>
+
+              <button class="ctrl-btn ctrl-lg" id="ctrl-play" aria-label="Play/Pause">
+                <svg class="icon-play" viewBox="0 0 24 24" width="28" height="28">
+                  <polygon points="5 3 19 12 5 21 5 3" fill="currentColor"/>
+                </svg>
+                <svg class="icon-pause is-hidden" viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                  <rect x="6" y="4" width="4" height="16"/>
+                  <rect x="14" y="4" width="4" height="16"/>
+                </svg>
+              </button>
+
+              <button class="ctrl-btn ctrl-sm" id="ctrl-loop" aria-label="Repetir">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
+                  <polyline points="17 1 21 5 17 9"/>
+                  <path d="M3 11V9a4 4 0 0 1 4-4h14"/>
+                  <polyline points="7 23 3 19 7 15"/>
+                  <path d="M21 13v2a4 4 0 0 1-4 4H3"/>
+                </svg>
+              </button>
+            </div>
+
+            <!--
+              NOTA: Música não incluída no projeto.
+              Adicione o arquivo em: assets/music/lover.mp3
+              A música iniciará automaticamente quando o arquivo estiver presente.
+            -->
+            <p class="music-file-note" id="music-file-note">
+              ♪ Adicione <code>lover.mp3</code> em <code>assets/music/</code>
+            </p>
+
+          </div><!-- /music-player -->
+        </div>
+      </section>
+
+
+      <!-- ══════════════════════════════════════════════════════
+           SLIDE 8 (Tela 10) — CÉU ESTRELADO
+           Estrelas com memórias: edite o array STAR_MEMORIES em js/script.js
+           Fotos das memórias: assets/images/memory-X.jpg
+      ════════════════════════════════════════════════════════ -->
+      <section class="slide" id="slide-stars" data-index="8" aria-label="Céu estrelado com memórias">
+        <div class="slide-bg bg-stars"></div>
+        <canvas id="star-canvas" class="star-canvas" aria-hidden="true"></canvas>
+        <div class="stars-ui">
+          <header class="slide-header stars-hdr">
+            <p class="eyebrow">toque em uma estrela</p>
+            <h2 class="slide-title">Cada estrela guarda<br>uma memória</h2>
+          </header>
+          <p class="stars-hint">✦ toque nas estrelas maiores ✦</p>
+        </div>
+      </section>
+
+
+      <!-- ══════════════════════════════════════════════════════
+           SLIDE 9 (Tela 11) — TRANSIÇÃO
+      ════════════════════════════════════════════════════════ -->
+      <section class="slide" id="slide-transition" data-index="9" aria-label="Transição">
+        <div class="slide-bg bg-transition"></div>
+        <div class="slide-center">
+          <div class="transition-content">
+            <p class="transition-main" id="transition-main">
+              Você percorreu<br>toda a nossa história...
+            </p>
+            <div class="transition-dots" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+            <p class="transition-sub" id="transition-sub">
+              E ainda temos tantos capítulos<br>a escrever juntos
+            </p>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ══════════════════════════════════════════════════════
+           SLIDE 10 (Tela 12) — DECLARAÇÃO FINAL
+
+           ✏️  PARA PERSONALIZAR:
+           Substitua o bloco abaixo pela declaração real.
+           Cada <p class="decl-para"> aparecerá com delay gradual.
+           Exemplo no comentário abaixo.
+      ════════════════════════════════════════════════════════ -->
+      <section class="slide" id="slide-declaration" data-index="10" aria-label="Declaração final">
+        <div class="slide-bg bg-declaration"></div>
+        <div class="decl-particles" id="decl-particles"></div>
+        <div class="slide-center">
+          <div class="declaration-wrap">
+
+            <div class="decl-texts" id="decl-texts">
+
+              <!--
+                ════════════════════════════════════════════════
+                DECLARAÇÃO FINAL — SUBSTITUA AQUI
+                
+                Apague o parágrafo [INSERIR DECLARAÇÃO FINAL]
+                e escreva sua mensagem usando <p class="decl-para">
+                
+                Exemplo:
+                <p class="decl-para">Estephanie,</p>
+                <p class="decl-para">Desde 02 de março de 2024, você mudou
+                  a minha vida de um jeito que eu nunca imaginei.</p>
+                <p class="decl-para">Cada dia ao seu lado é o melhor dia da minha vida.</p>
+                <p class="decl-para">Eu te amo hoje, amanhã e sempre. ❤️</p>
+                ════════════════════════════════════════════════
+              -->
+
+              <p class="decl-para decl-placeholder">
+                [INSERIR DECLARAÇÃO FINAL]
+              </p>
+
+            </div><!-- /decl-texts -->
+
+            <div class="decl-signature" id="decl-signature">
+              <div class="decl-rule"></div>
+              <p class="decl-from">Com todo o meu amor,</p>
+              <p class="decl-name">Matheus</p>
+              <p class="decl-date">12 de junho de 2026</p>
+            </div>
+
+          </div><!-- /declaration-wrap -->
+        </div>
+      </section>
+
+
+    </div><!-- /slides-track -->
+  </div><!-- /experience -->
+
+
+  <!-- ══════════════════════════════════════════════════════
+       LIGHTBOX — Visualizador de fotos
+  ════════════════════════════════════════════════════════ -->
+  <div id="lightbox" class="lightbox is-hidden" role="dialog" aria-modal="true" aria-label="Visualizar foto">
+    <div class="lb-overlay" id="lb-overlay"></div>
+    <div class="lb-inner">
+      <button class="lb-close" id="lb-close" aria-label="Fechar foto">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+      <img id="lb-img" src="" alt="" loading="lazy" class="lb-img">
+      <p id="lb-caption" class="lb-caption"></p>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       MEMORY MODAL — Para o céu estrelado
+  ════════════════════════════════════════════════════════ -->
+  <div id="memory-modal" class="memory-modal is-hidden" role="dialog" aria-modal="true" aria-label="Memória">
+    <div class="mm-overlay" id="mm-overlay"></div>
+    <div class="mm-inner">
+      <button class="mm-close" id="mm-close" aria-label="Fechar memória">✕</button>
+      <div id="mm-body" class="mm-body"></div>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       VIDEO MODAL — Player de vídeo em tela cheia
+  ════════════════════════════════════════════════════════ -->
+  <div id="video-modal" class="video-modal is-hidden" role="dialog" aria-modal="true" aria-label="Reproduzir vídeo">
+    <div class="vm-overlay" id="vm-overlay"></div>
+    <div class="vm-inner">
+      <button class="vm-close" id="vm-close" aria-label="Fechar vídeo">✕</button>
+      <video id="modal-video" class="modal-video-el" controls playsinline>
+        <source id="modal-video-src" src="" type="video/mp4">
+      </video>
+      <p id="vm-title-text" class="vm-title-text"></p>
+    </div>
+  </div>
+
+
+</div><!-- /app -->
+
+<script src="js/script.js"></script>
+</body>
+</html>
