@@ -11,9 +11,9 @@
   --rose-dark:   #8B6E9F;
   --white:       #FFFFFF;
   --off-white:   #F8F4F6;
-  --navy:        #0F172A;
-  --navy-mid:    #1E2D45;
-  --navy-light:  #263548;
+  --navy:        #2A0F1A;
+  --navy-mid:    #451A29;
+  --navy-light:  #5A2236;
 
   --font-serif:  'Playfair Display', Georgia, serif;
   --font-sans:   'Inter', system-ui, sans-serif;
@@ -412,33 +412,33 @@ button {
   background:
     radial-gradient(ellipse 80% 60% at 50% 0%,   rgba(245,194,215,0.35) 0%, transparent 70%),
     radial-gradient(ellipse 60% 50% at 80% 90%,  rgba(201,160,191,0.2)  0%, transparent 60%),
-    linear-gradient(160deg, #1a0a1e 0%, #0F172A 50%, #120a1f 100%);
+    linear-gradient(160deg, #1a0a1e 0%, #2A0F1A 50%, #120a1f 100%);
 }
 
 /* Slide 1 — Counter */
 .bg-space {
-  background: radial-gradient(ellipse 100% 80% at 50% 100%, #1a1040 0%, #0F172A 60%);
+  background: radial-gradient(ellipse 100% 80% at 50% 100%, #2A0A18 0%, #2A0F1A 60%);
 }
 
 /* Slide 2 — Beginning */
 .bg-warm {
   background:
     radial-gradient(ellipse 80% 50% at 20% 20%, rgba(245,194,215,0.25) 0%, transparent 70%),
-    linear-gradient(135deg, #1a0d1a 0%, #0F172A 60%, #0d1a2a 100%);
+    linear-gradient(135deg, #1a0d1a 0%, #2A0F1A 60%, #1A050F 100%);
 }
 
 /* Slide 3 — First Year */
 .bg-firstyear {
   background:
     radial-gradient(ellipse 70% 60% at 80% 20%, rgba(139,110,159,0.3) 0%, transparent 60%),
-    linear-gradient(160deg, #0d0a1a 0%, #0F172A 100%);
+    linear-gradient(160deg, #0d0a1a 0%, #2A0F1A 100%);
 }
 
 /* Slide 4 — Favorites */
 .bg-favorites {
   background:
     radial-gradient(ellipse 60% 50% at 50% 50%, rgba(245,194,215,0.12) 0%, transparent 70%),
-    linear-gradient(135deg, #120a1a 0%, #0F172A 60%, #1a0a12 100%);
+    linear-gradient(135deg, #120a1a 0%, #2A0F1A 60%, #1a0a12 100%);
 }
 
 /* Slide 5 — Music (Lover palette) */
@@ -446,7 +446,7 @@ button {
   background:
     radial-gradient(ellipse 100% 100% at 50% 0%,   rgba(245,194,215,0.25) 0%, transparent 60%),
     radial-gradient(ellipse 80%  80% at 100% 100%, rgba(173,216,230,0.2)  0%, transparent 60%),
-    linear-gradient(160deg, #0d0a18 0%, #0F172A 50%, #0a0d18 100%);
+    linear-gradient(160deg, #0d0a18 0%, #2A0F1A 50%, #0a0d18 100%);
 }
 
 /* Slide 6 — Stars */
@@ -463,7 +463,7 @@ button {
 .bg-declaration {
   background:
     radial-gradient(ellipse 70% 60% at 50% 50%, rgba(245,194,215,0.08) 0%, transparent 70%),
-    linear-gradient(160deg, #050810 0%, #0F172A 100%);
+    linear-gradient(160deg, #050810 0%, #2A0F1A 100%);
 }
 
 
@@ -654,7 +654,7 @@ button {
   width: 100%;
   border-radius: var(--radius-card);
   overflow: hidden;
-  background: linear-gradient(135deg, var(--ph-color-a, #2a1a3a), var(--ph-color-b, #0F172A));
+  background: linear-gradient(135deg, var(--ph-color-a, #2a1a3a), var(--ph-color-b, #2A0F1A));
   transition: transform 0.3s var(--ease-bounce), box-shadow 0.3s;
   aspect-ratio: 3/4;
 }
@@ -843,7 +843,7 @@ button {
   justify-content: center;
   font-size: 4rem;
   color: rgba(255,255,255,0.2);
-  background: linear-gradient(135deg, #1a1030, #0F172A);
+  background: linear-gradient(135deg, #300A1A, #2A0F1A);
   border-radius: 50%;
 }
 
