@@ -621,6 +621,35 @@ button {
   margin-bottom: 0.8rem;
 }
 
+
+/* Beginning Grid */
+.beginning-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+.beginning-grid .photo-card {
+  width: 100%;
+}
+.beginning-grid .photo-card .photo-inner {
+  height: 140px;
+}
+.beginning-grid .photo-card-wide {
+  grid-column: span 2;
+}
+.beginning-grid .photo-card-wide .photo-inner {
+  height: 170px;
+}
+.beginning-text {
+  text-align: center;
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: var(--white);
+  font-style: italic;
+  letter-spacing: 0.05em;
+}
+
 /* Horizontal gallery */
 .gallery-h {
   display: flex;

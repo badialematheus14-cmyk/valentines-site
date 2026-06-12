@@ -56,20 +56,6 @@ const STAR_MEMORIES = [
     title: 'Holambra',
     text: 'Nosso passeio para Holambra foi perfeito. O dia já estava sendo incrível, mas ficou ainda melhor quando fomos chamados ao palco para dançar juntos. Acho que passamos um pouco de vergonha na frente de uma multidão inteira, mas valeu cada segundo hahahahaha',
     photo: 'assets/images/memory-6.jpg'
-  },
-  {
-    emoji: '🎵',
-    date: 'Sempre',
-    title: 'Nossa Música',
-    text: 'Lover — Taylor Swift. Toda vez que ouço, penso em você.',
-    photo: null
-  },
-  {
-    emoji: '🌟',
-    date: 'Todo dia',
-    title: 'Cada Momento',
-    text: 'Cada café da manhã, cada risada, cada abraço. É você.',
-    photo: null
   }
 ];
 
