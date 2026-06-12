@@ -759,9 +759,9 @@ button {
    ══════════════════════════════════════════════════════════ */
 .moments-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.6rem;
-  auto-rows: 100px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
+  auto-rows: auto;
 }
 .moment-item {
   border-radius: 12px;
@@ -771,13 +771,13 @@ button {
 }
 .moment-item .photo-inner {
   width: 100%;
-  height: 120px;
+  height: 150px;
   aspect-ratio: unset;
   border-radius: 12px;
 }
-.moment-tall .photo-inner  { height: 250px; }
+.moment-tall .photo-inner  { height: 310px; }
 .moment-wide               { grid-column: span 2; }
-.moment-wide .photo-inner  { height: 120px; }
+.moment-wide .photo-inner  { height: 160px; }
 
 
 /* ══════════════════════════════════════════════════════════
@@ -1225,19 +1225,23 @@ button {
 /* Novo container da imagem */
 .mm-photo-wrap {
   width: 100%;
-  aspect-ratio: 16 / 11;
+  height: 240px;
   border-radius: 16px;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(0, 0, 0, 0.25);
   border: 1px solid rgba(255, 255, 255, 0.08);
   margin-bottom: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  box-shadow: inset 0 0 20px rgba(0,0,0,0.4);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
 }
 .mm-photo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
   animation: fadeIn 0.4s var(--ease-out);
 }
 
@@ -1315,6 +1319,245 @@ button {
 
 
 /* ══════════════════════════════════════════════════════════
+   SLIDE 3 — MINHA GATA (Galeria da Estephanie)
+   ══════════════════════════════════════════════════════════ */
+.gata-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.7rem;
+  height: calc(100dvh - 16rem);
+  max-height: 520px;
+}
+.gata-item {
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+.gata-item:first-child {
+  grid-row: span 2;
+}
+.gata-item .photo-inner {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: unset;
+  border-radius: var(--radius-card);
+}
+.gata-item .photo-img {
+  transition: transform 0.6s var(--ease-smooth);
+}
+.gata-item:hover .photo-img,
+.gata-item:active .photo-img {
+  transform: scale(1.05);
+}
+.gata-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem 1rem 0.8rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%);
+  z-index: 3;
+  pointer-events: none;
+}
+.gata-label span {
+  font-family: var(--font-serif);
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--rose);
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+
+
+/* ══════════════════════════════════════════════════════════
+   SLIDE 4 — QUIZ (Nosso Primeiro Ano)
+   ══════════════════════════════════════════════════════════ */
+.quiz-wrap {
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+  z-index: 1;
+}
+.quiz-question {
+  font-family: var(--font-serif);
+  font-size: clamp(1.1rem, 4.5vw, 1.4rem);
+  font-weight: 600;
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 1.8rem;
+  line-height: 1.4;
+}
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.quiz-option {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 1rem 1.2rem;
+  border-radius: var(--radius-card);
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.08);
+  cursor: pointer;
+  transition: all 0.35s var(--ease-smooth);
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.85);
+  text-align: left;
+}
+.quiz-option:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(245,194,215,0.3);
+  transform: translateY(-2px);
+}
+.quiz-option:active {
+  transform: scale(0.97);
+}
+.quiz-option-letter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--rose);
+  flex-shrink: 0;
+  transition: all 0.35s;
+}
+.quiz-option.is-wrong {
+  animation: quizShake 0.5s var(--ease-smooth);
+  border-color: rgba(255, 80, 80, 0.5);
+  background: rgba(255, 80, 80, 0.08);
+}
+.quiz-option.is-wrong .quiz-option-letter {
+  background: rgba(255, 80, 80, 0.2);
+  color: #ff6b6b;
+}
+.quiz-option.is-correct {
+  border-color: rgba(100, 255, 150, 0.5);
+  background: rgba(100, 255, 150, 0.1);
+  transform: scale(1.03);
+}
+.quiz-option.is-correct .quiz-option-letter {
+  background: rgba(100, 255, 150, 0.25);
+  color: #6bffb0;
+}
+.quiz-feedback {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.5);
+  min-height: 1.5rem;
+}
+.quiz-feedback.is-wrong {
+  color: #ff9999;
+}
+.quiz-feedback.is-correct {
+  color: #9bffcb;
+}
+.quiz-reveal {
+  display: none;
+  text-align: center;
+  animation: quizRevealIn 0.8s var(--ease-out) both;
+}
+.quiz-reveal.is-active {
+  display: block;
+}
+.quiz-reveal-emoji {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: heartPulse 1.5s ease-in-out infinite;
+}
+.quiz-reveal-title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--rose);
+  margin-bottom: 0.8rem;
+}
+.quiz-reveal-text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.8);
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+
+/* ══════════════════════════════════════════════════════════
+   SLIDE 5 — MOMENTOS FAVORITOS (Carrossel)
+   ══════════════════════════════════════════════════════════ */
+.carousel-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+  aspect-ratio: 3/4;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+.carousel-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: scale(1.05);
+  transition: opacity 0.8s var(--ease-smooth), transform 0.8s var(--ease-smooth);
+  z-index: 1;
+}
+.carousel-slide.is-active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
+.carousel-slide .photo-inner {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: unset;
+  border-radius: 0;
+}
+.carousel-slide .photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+  cursor: pointer;
+  transition: all 0.3s var(--ease-smooth);
+}
+.carousel-dot.is-active {
+  background: var(--rose);
+  transform: scale(1.3);
+  box-shadow: 0 0 8px rgba(245,194,215,0.5);
+}
+.carousel-counter {
+  text-align: center;
+  margin-top: 0.6rem;
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 0.1em;
+}
+
+
+/* ══════════════════════════════════════════════════════════
    KEYFRAME ANIMATIONS
    ══════════════════════════════════════════════════════════ */
 @keyframes fadeIn {
@@ -1364,11 +1607,28 @@ button {
   0%, 100% { opacity: 0; transform: scale(0.5); }
   50%       { opacity: 1; transform: scale(1); }
 }
+@keyframes quizShake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-8px); }
+  40% { transform: translateX(8px); }
+  60% { transform: translateX(-5px); }
+  80% { transform: translateX(5px); }
+}
+@keyframes quizRevealIn {
+  from { opacity: 0; transform: translateY(30px) scale(0.9); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
 
 
 /* ══════════════════════════════════════════════════════════
    RESPONSIVE
    ══════════════════════════════════════════════════════════ */
+@media (max-width: 480px) {
+  .firstyear-grid {
+    height: 360px; /* Reduces height on mobile to make the column wider and crop less */
+  }
+}
+
 @media (min-width: 480px) {
   .counter-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -1383,6 +1643,8 @@ button {
   .moments-grid { grid-template-columns: repeat(3, 1fr); }
   .moment-item .photo-inner { height: 140px; }
   .moment-tall .photo-inner { height: 290px; }
+  .moment-wide { grid-column: span 2; }
+  .moment-wide .photo-inner { height: 140px; }
 }
 
 @media (max-height: 680px) {

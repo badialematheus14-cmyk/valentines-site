@@ -229,11 +229,57 @@
       </section>
 
 
+
+      <!-- ══════════════════════════════════════════════════════
+           SLIDE 3 (Tela 4) — MINHA GATA
+           Fotos: assets/images/gata-1.jpg até gata-4.jpg
+      ════════════════════════════════════════════════════════ -->
+      <section class="slide" id="slide-gata" data-index="3" aria-label="Minha Gata">
+        <div class="slide-bg bg-firstyear"></div>
+        <div class="slide-inner">
+          <header class="slide-header">
+            <p class="eyebrow">A protagonista</p>
+            <h2 class="slide-title">Minha<br>Gata</h2>
+          </header>
+
+          <div class="gata-gallery">
+            <div class="gata-item" onclick="openLightbox('assets/images/gata-1.jpg','A mais linda')">
+              <div class="photo-inner" style="--ph-color-a:#1E3A5F;--ph-color-b:#0F172A;">
+                <img src="assets/images/gata-1.jpg" alt="Minha Gata 1" loading="lazy" class="photo-img" onerror="this.style.display='none'">
+                <div class="photo-ph"><span>📸</span></div>
+              </div>
+              <div class="gata-label"><span>Perfeição</span></div>
+            </div>
+            
+            <div class="gata-item" onclick="openLightbox('assets/images/gata-2.jpg','Sempre maravilhosa')">
+              <div class="photo-inner" style="--ph-color-a:#2D1B3D;--ph-color-b:#1a0f2e;">
+                <img src="assets/images/gata-2.jpg" alt="Minha Gata 2" loading="lazy" class="photo-img" onerror="this.style.display='none'">
+                <div class="photo-ph"><span>📸</span></div>
+              </div>
+            </div>
+
+            <div class="gata-item" onclick="openLightbox('assets/images/gata-3.jpg','Meu amor')">
+              <div class="photo-inner" style="--ph-color-a:#3D1B2D;--ph-color-b:#2a0f1e;">
+                <img src="assets/images/gata-3.jpg" alt="Minha Gata 3" loading="lazy" class="photo-img" onerror="this.style.display='none'">
+                <div class="photo-ph"><span>📸</span></div>
+              </div>
+            </div>
+
+            <div class="gata-item" onclick="openLightbox('assets/images/gata-4.jpg','Princesa')">
+              <div class="photo-inner" style="--ph-color-a:#1E3A5F;--ph-color-b:#0F172A;">
+                <img src="assets/images/gata-4.jpg" alt="Minha Gata 4" loading="lazy" class="photo-img" onerror="this.style.display='none'">
+                <div class="photo-ph"><span>📸</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- ══════════════════════════════════════════════════════
            SLIDE 3 (Tela 5) — PRIMEIRO ANO
            Fotos: assets/images/year1-1.jpg até year1-3.jpg
       ════════════════════════════════════════════════════════ -->
-      <section class="slide" id="slide-firstyear" data-index="3" aria-label="Nosso primeiro ano">
+      <section class="slide" id="slide-firstyear" data-index="4" aria-label="Nosso primeiro ano">
         <div class="slide-bg bg-firstyear"></div>
         <div class="slide-inner">
           <header class="slide-header">
@@ -246,47 +292,45 @@
             Para adicionar fotos:
             Copie para assets/images/year1-1.jpg, year1-2.jpg, year1-3.jpg
           -->
-          <div class="firstyear-grid">
-
-            <div class="fy-card fy-large" onclick="openLightbox('assets/images/year1-1.jpg','Nosso primeiro ano juntos')">
-              <!-- FOTO PRINCIPAL: assets/images/year1-1.jpg -->
-              <div class="photo-inner" style="--ph-color-a:#1E3A5F;--ph-color-b:#0F172A;">
-                <img src="assets/images/year1-1.jpg" alt="Primeiro ano — foto principal" loading="lazy" class="photo-img" onerror="this.style.display='none'">
-                <div class="photo-ph"><span>📸</span><small>year1-1.jpg</small></div>
+                    <div class="quiz-wrap" id="quiz-form">
+            <h3 class="quiz-question">Qual foi o nosso terceiro date?</h3>
+            <div class="quiz-options">
+              <div class="quiz-option" data-letter="A">
+                <span class="quiz-option-letter">A</span>
+                <span class="quiz-option-text">Cinema - Demon Slayer</span>
               </div>
-              <div class="fy-overlay">
-                <span class="fy-badge">✦ A melhor fase</span>
+              <div class="quiz-option" data-letter="B">
+                <span class="quiz-option-letter">B</span>
+                <span class="quiz-option-text">Kinoplex - Pobres Criaturas</span>
               </div>
-            </div>
-
-            <div class="fy-col">
-              <div class="fy-card" onclick="openLightbox('assets/images/year1-2.jpg','Momentos inesquecíveis')">
-                <!-- FOTO: assets/images/year1-2.jpg -->
-                <div class="photo-inner" style="--ph-color-a:#2D1B3D;--ph-color-b:#1a0f2e;">
-                  <img src="assets/images/year1-2.jpg" alt="Primeiro ano — foto 2" loading="lazy" class="photo-img" onerror="this.style.display='none'">
-                  <div class="photo-ph"><span>📸</span><small>year1-2.jpg</small></div>
-                </div>
+              <div class="quiz-option" data-letter="C">
+                <span class="quiz-option-letter">C</span>
+                <span class="quiz-option-text">Farol Santander</span>
               </div>
-
-              <div class="fy-card" onclick="openLightbox('assets/images/year1-3.jpg','Crescendo juntos')">
-                <!-- FOTO: assets/images/year1-3.jpg -->
-                <div class="photo-inner" style="--ph-color-a:#3D1B2D;--ph-color-b:#2a0f1e;">
-                  <img src="assets/images/year1-3.jpg" alt="Primeiro ano — foto 3" loading="lazy" class="photo-img" onerror="this.style.display='none'">
-                  <div class="photo-ph"><span>📸</span><small>year1-3.jpg</small></div>
-                </div>
+              <div class="quiz-option" data-letter="D">
+                <span class="quiz-option-letter">D</span>
+                <span class="quiz-option-text">Sampa Sky</span>
               </div>
             </div>
+            <div class="quiz-feedback" id="quiz-feedback"></div>
+          </div>
 
-          </div><!-- /firstyear-grid -->
+          <div class="quiz-reveal" id="quiz-reveal">
+            <div class="quiz-reveal-emoji">🌹</div>
+            <h3 class="quiz-reveal-title">Isso mesmo!</h3>
+            <p class="quiz-reveal-text">
+              O Farol Santander foi nosso terceiro date e nesse dia nós passeamos por SP inteira com um buquê de rosas que eu te dei ❤️
+            </p>
+          </div>
         </div>
       </section>
 
 
       <!-- ══════════════════════════════════════════════════════
-           SLIDE 4 (Tela 6) — MOMENTOS FAVORITOS
+           SLIDE 5 (Tela 6) — MOMENTOS FAVORITOS
            Fotos: assets/images/moment-1.jpg até moment-6.jpg
       ════════════════════════════════════════════════════════ -->
-      <section class="slide" id="slide-favorites" data-index="4" aria-label="Momentos favoritos">
+      <section class="slide" id="slide-favorites" data-index="5" aria-label="Momentos favoritos">
         <div class="slide-bg bg-favorites"></div>
         <div class="slide-inner">
           <header class="slide-header">
@@ -300,57 +344,54 @@
             Copie para assets/images/moment-1.jpg até moment-6.jpg
             Toque/clique numa foto para ampliar (lightbox).
           -->
-          <div class="moments-grid">
-
-            <div class="moment-item" onclick="openLightbox('assets/images/moment-1.jpg','Momento favorito')">
-              <!-- FOTO: assets/images/moment-1.jpg -->
+                    <div class="carousel-wrap">
+            <div class="carousel-slide is-active">
               <div class="photo-inner" style="--ph-color-a:#F5C2D7;--ph-color-b:#C9A0BF;">
-                <img src="assets/images/moment-1.jpg" alt="Momento favorito 1" loading="lazy" class="photo-img" onerror="this.style.display='none'">
+                <img src="assets/images/moment-1.jpg" alt="Momento 1" class="photo-img" loading="lazy" onerror="this.style.display='none'">
                 <div class="photo-ph"><span>📸</span></div>
               </div>
             </div>
-
-            <div class="moment-item moment-tall" onclick="openLightbox('assets/images/moment-2.jpg','Memória especial')">
-              <!-- FOTO: assets/images/moment-2.jpg -->
+            <div class="carousel-slide">
               <div class="photo-inner" style="--ph-color-a:#C9A0BF;--ph-color-b:#8B6E9F;">
-                <img src="assets/images/moment-2.jpg" alt="Momento favorito 2" loading="lazy" class="photo-img" onerror="this.style.display='none'">
+                <img src="assets/images/moment-2.jpg" alt="Momento 2" class="photo-img" loading="lazy" onerror="this.style.display='none'">
                 <div class="photo-ph"><span>📸</span></div>
               </div>
             </div>
-
-            <div class="moment-item" onclick="openLightbox('assets/images/moment-3.jpg','Instante único')">
-              <!-- FOTO: assets/images/moment-3.jpg -->
+            <div class="carousel-slide">
               <div class="photo-inner" style="--ph-color-a:#8B6E9F;--ph-color-b:#5A3D7A;">
-                <img src="assets/images/moment-3.jpg" alt="Momento favorito 3" loading="lazy" class="photo-img" onerror="this.style.display='none'">
+                <img src="assets/images/moment-3.jpg" alt="Momento 3" class="photo-img" loading="lazy" onerror="this.style.display='none'">
                 <div class="photo-ph"><span>📸</span></div>
               </div>
             </div>
-
-            <div class="moment-item moment-wide" onclick="openLightbox('assets/images/moment-4.jpg','Juntos sempre')">
-              <!-- FOTO: assets/images/moment-4.jpg -->
+            <div class="carousel-slide">
               <div class="photo-inner" style="--ph-color-a:#5A3D7A;--ph-color-b:#3D1B5A;">
-                <img src="assets/images/moment-4.jpg" alt="Momento favorito 4" loading="lazy" class="photo-img" onerror="this.style.display='none'">
+                <img src="assets/images/moment-4.jpg" alt="Momento 4" class="photo-img" loading="lazy" onerror="this.style.display='none'">
                 <div class="photo-ph"><span>📸</span></div>
               </div>
             </div>
-
-            <div class="moment-item" onclick="openLightbox('assets/images/moment-5.jpg','Nossa luz')">
-              <!-- FOTO: assets/images/moment-5.jpg -->
+            <div class="carousel-slide">
               <div class="photo-inner" style="--ph-color-a:#F5C2D7;--ph-color-b:#E8A0C0;">
-                <img src="assets/images/moment-5.jpg" alt="Momento favorito 5" loading="lazy" class="photo-img" onerror="this.style.display='none'">
+                <img src="assets/images/moment-5.jpg" alt="Momento 5" class="photo-img" loading="lazy" onerror="this.style.display='none'">
                 <div class="photo-ph"><span>📸</span></div>
               </div>
             </div>
-
-            <div class="moment-item" onclick="openLightbox('assets/images/moment-6.jpg','Felicidade')">
-              <!-- FOTO: assets/images/moment-6.jpg -->
+            <div class="carousel-slide">
               <div class="photo-inner" style="--ph-color-a:#E8A0C0;--ph-color-b:#D480A0;">
-                <img src="assets/images/moment-6.jpg" alt="Momento favorito 6" loading="lazy" class="photo-img" onerror="this.style.display='none'">
+                <img src="assets/images/moment-6.jpg" alt="Momento 6" class="photo-img" loading="lazy" onerror="this.style.display='none'">
                 <div class="photo-ph"><span>📸</span></div>
               </div>
             </div>
 
-          </div><!-- /moments-grid -->
+            <div class="carousel-dots">
+              <div class="carousel-dot is-active"></div>
+              <div class="carousel-dot"></div>
+              <div class="carousel-dot"></div>
+              <div class="carousel-dot"></div>
+              <div class="carousel-dot"></div>
+              <div class="carousel-dot"></div>
+            </div>
+            <div class="carousel-counter" id="carousel-counter">1 / 6</div>
+          </div>
         </div>
       </section>
 
@@ -358,11 +399,11 @@
 
 
       <!-- ══════════════════════════════════════════════════════
-           SLIDE 5 (Tela 6) — LOVER (PLAYER DE MÚSICA)
+           SLIDE 6 (Tela 6) — LOVER (PLAYER DE MÚSICA)
            Música: assets/music/lover.mp3
            Capa: assets/images/lover-cover.jpg (500×500px)
       ════════════════════════════════════════════════════════ -->
-      <section class="slide" id="slide-music" data-index="5" aria-label="Nossa música — Lover">
+      <section class="slide" id="slide-music" data-index="6" aria-label="Nossa música — Lover">
         <div class="slide-bg bg-music"></div>
         <div class="music-ambient-blur" id="music-ambient"></div>
         <div class="slide-center">
@@ -448,11 +489,11 @@
 
 
       <!-- ══════════════════════════════════════════════════════
-           SLIDE 6 (Tela 7) — CÉU ESTRELADO
+           SLIDE 7 (Tela 7) — CÉU ESTRELADO
            Estrelas com memórias: edite o array STAR_MEMORIES em js/script.js
            Fotos das memórias: assets/images/memory-X.jpg
       ════════════════════════════════════════════════════════ -->
-      <section class="slide" id="slide-stars" data-index="6" aria-label="Céu estrelado com memórias">
+      <section class="slide" id="slide-stars" data-index="7" aria-label="Céu estrelado com memórias">
         <div class="slide-bg bg-stars"></div>
         <canvas id="star-canvas" class="star-canvas" aria-hidden="true"></canvas>
         <div class="stars-ui">
@@ -466,9 +507,9 @@
 
 
       <!-- ══════════════════════════════════════════════════════
-           SLIDE 7 (Tela 8) — TRANSIÇÃO
+           SLIDE 8 (Tela 8) — TRANSIÇÃO
       ════════════════════════════════════════════════════════ -->
-      <section class="slide" id="slide-transition" data-index="7" aria-label="Transição">
+      <section class="slide" id="slide-transition" data-index="8" aria-label="Transição">
         <div class="slide-bg bg-transition"></div>
         <div class="slide-center">
           <div class="transition-content">
@@ -487,14 +528,14 @@
 
 
       <!-- ══════════════════════════════════════════════════════
-           SLIDE 8 (Tela 9) — DECLARAÇÃO FINAL
+           SLIDE 9 (Tela 9) — DECLARAÇÃO FINAL
 
            ✏️  PARA PERSONALIZAR:
            Substitua o bloco abaixo pela declaração real.
            Cada <p class="decl-para"> aparecerá com delay gradual.
            Exemplo no comentário abaixo.
       ════════════════════════════════════════════════════════ -->
-      <section class="slide" id="slide-declaration" data-index="8" aria-label="Declaração final">
+      <section class="slide" id="slide-declaration" data-index="9" aria-label="Declaração final">
         <div class="slide-bg bg-declaration"></div>
         <div class="decl-particles" id="decl-particles"></div>
         <div class="slide-center">
@@ -518,9 +559,9 @@
                 ════════════════════════════════════════════════
               -->
 
-              <p class="decl-para decl-placeholder">
-                [INSERIR DECLARAÇÃO FINAL]
-              </p>
+                            <p class="decl-para">Meu amor, a vida ao seu lado é mais leve, mais bonita e mais feliz. Ao seu lado, me sinto a pessoa mais feliz do mundo.</p>
+              <p class="decl-para">E este é apenas mais um capítulo da nossa história, porque ainda temos muitos sonhos, momentos e páginas para escrever juntos.</p>
+              <p class="decl-para">Eu te amo ❤️</p>
 
             </div><!-- /decl-texts -->
 

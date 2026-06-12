@@ -16,46 +16,46 @@
    ─────────────────────────────────────────────────────── */
 const STAR_MEMORIES = [
   {
-    emoji: '💫',
-    date: '02/03/2024',
-    title: 'O Primeiro Dia',
-    text: 'O dia que tudo começou... e que eu nunca vou esquecer.',
-    photo: 'assets/images/memory-1.jpg'   // FOTO: adicione assets/images/memory-1.jpg
-  },
-  {
-    emoji: '❤️',
-    date: '17/05/2024',
-    title: 'Oficialmente Namorados',
-    text: 'O dia mais especial. O dia em que você disse sim.',
-    photo: 'assets/images/memory-2.jpg'   // FOTO: adicione assets/images/memory-2.jpg
-  },
-  {
-    emoji: '🌙',
-    date: '2024',
-    title: 'Nossa Primeira Noite',
-    text: 'Conversamos até o sol nascer. Sabia que era diferente.',
-    photo: 'assets/images/memory-3.jpg'   // FOTO: adicione assets/images/memory-3.jpg
-  },
-  {
-    emoji: '✈️',
-    date: '2024',
-    title: 'Nossa Primeira Viagem',
-    text: 'A primeira de muitas aventuras juntos.',
-    photo: 'assets/images/memory-4.jpg'   // FOTO: adicione assets/images/memory-4.jpg
-  },
-  {
-    emoji: '🎂',
-    date: '2024',
-    title: 'Primeiro Aniversário',
-    text: 'A primeira vez que comemoramos algo juntos.',
-    photo: 'assets/images/memory-5.jpg'   // FOTO: adicione assets/images/memory-5.jpg
+    emoji: '🎸',
+    date: '04/04/2026',
+    title: 'Show do Gun\'s Roses',
+    text: 'Ir ao show da minha banda favorita já seria inesquecível, mas ter você comigo tornou esse momento ainda mais perfeito. Não poderia imaginar companhia melhor para compartilhar essa experiência.',
+    photo: 'assets/images/memory-1.jpg'
   },
   {
     emoji: '🌅',
+    date: '26/12/2025',
+    title: 'Praia Itaguaré',
+    text: 'Nosso primeiro nascer do sol juntos. Um momento lindo, uma foto incrível e uma lembrança que vou guardar para sempre.',
+    photo: 'assets/images/memory-2.jpg'
+  },
+  {
+    emoji: '💒',
+    date: '25/05/2024',
+    title: 'Casamento Gabi e Henrique',
+    text: 'O casamento da Gabi e do Henrique foi um dia muito especial para nós. Quando você me chamou para ir com você, eu fiquei feliz demais. Era algo que eu realmente não esperava, então acabou tendo um significado ainda maior para mim. Foi muito bom viver aquele momento ao seu lado e criar mais uma lembrança linda juntos.',
+    photo: 'assets/images/memory-3.jpg'
+  },
+  {
+    emoji: '🎄',
+    date: '24/12/2024',
+    title: '1° Natal Juntos',
+    text: 'Nosso primeiro Natal juntos. Um dia cheio de carinho, felicidade e momentos especiais que fizeram essa data ser ainda mais inesquecível.',
+    photo: 'assets/images/memory-4.jpg'
+  },
+  {
+    emoji: '🍦',
+    date: '26/04/2026',
+    title: 'Passeio Ibirapuera',
+    text: 'Nosso passeio ao Ibirapuera foi um dia simples, mas muito especial. Enquanto tomávamos um sorvete que você estava com vontade, vimos uma decoração de uma paisagem da Itália. Aquilo me fez imaginar em nossos sonhos e como será incrível conhecer a Costa Amalfitana ao seu lado.',
+    photo: 'assets/images/memory-5.jpg'
+  },
+  {
+    emoji: '🌷',
     date: '2025',
-    title: 'Nosso Primeiro Ano',
-    text: 'Um ano inteiro de crescimento, amor e cumplicidade.',
-    photo: 'assets/images/memory-6.jpg'   // FOTO: adicione assets/images/memory-6.jpg
+    title: 'Holambra',
+    text: 'Nosso passeio para Holambra foi perfeito. O dia já estava sendo incrível, mas ficou ainda melhor quando fomos chamados ao palco para dançar juntos. Acho que passamos um pouco de vergonha na frente de uma multidão inteira, mas valeu cada segundo hahahahaha',
+    photo: 'assets/images/memory-6.jpg'
   },
   {
     emoji: '🎵',
@@ -85,7 +85,7 @@ const MUSIC_SRC = 'assets/music/lover.mp3';
 const DATE_NAMORO    = new Date(2024, 4, 17, 0, 0, 0);  // 17/05/2024
 const DATE_PRIMEIRO  = new Date(2024, 2, 2, 0, 0, 0);   // 02/03/2024
 
-const TOTAL_SLIDES = 9;   // Slides 0 a 8 (Telas 2 a 10)
+const TOTAL_SLIDES = 10;   // Slides 0 a 9 (Telas 2 a 11)
 
 
 /* ── 2. ESTADO ────────────────────────────────────────── */
@@ -432,10 +432,6 @@ function initKeyboard() {
       if (e.key === 'Escape') closeMemoryModal();
       return;
     }
-    if (dom.videoModal && !dom.videoModal.classList.contains('is-hidden')) {
-      if (e.key === 'Escape') closeVideoModal();
-      return;
-    }
 
     switch(e.key) {
       case 'ArrowRight': case 'ArrowDown': nextSlide(); break;
@@ -454,9 +450,10 @@ function activateSlide(idx) {
   switch(idx) {
     case 0: activateValentines(); break;
     case 1: activateCounter();    break;
-    case 6: activateStarCanvas(); break;
-    case 7: activateTransition(); break;
-    case 8: activateDeclaration(); break;
+    case 5: activateCarousel();   break;
+    case 7: activateStarCanvas(); break;
+    case 8: activateTransition(); break;
+    case 9: activateDeclaration(); break;
   }
 }
 
@@ -847,7 +844,7 @@ function onResize() {
   });
 
   // Resize canvas
-  if (dom.starCanvas && state.currentSlide === 6) {
+  if (dom.starCanvas && state.currentSlide === 7) {
     dom.starCanvas.width  = dom.starCanvas.offsetWidth;
     dom.starCanvas.height = dom.starCanvas.offsetHeight;
     activateStarCanvas();
@@ -862,6 +859,116 @@ window.closeLightbox  = closeLightbox;
 window.openMemoryModal = openMemoryModal;
 window.closeMemoryModal = closeMemoryModal;
 window.handleMemoryPhotoError = handleMemoryPhotoError;
+
+
+/* ── QUIZ (Slide 4) ─────────────────────────────────────── */
+const QUIZ_ANSWER = 'C';
+function initQuiz() {
+  document.querySelectorAll('.quiz-option').forEach(opt => {
+    opt.addEventListener('click', () => handleQuizAnswer(opt));
+  });
+}
+function handleQuizAnswer(opt) {
+  const letter = opt.dataset.letter;
+  const feedback = document.getElementById('quiz-feedback');
+  const quizForm = document.getElementById('quiz-form');
+  const quizReveal = document.getElementById('quiz-reveal');
+
+  // Remove previous states
+  document.querySelectorAll('.quiz-option').forEach(o => {
+    o.classList.remove('is-wrong', 'is-correct');
+  });
+
+  if (letter === QUIZ_ANSWER) {
+    opt.classList.add('is-correct');
+    if (feedback) {
+      feedback.textContent = 'Certoooo! ❤️';
+      feedback.className = 'quiz-feedback is-correct';
+    }
+    setTimeout(() => {
+      if (quizForm) quizForm.style.display = 'none';
+      if (quizReveal) quizReveal.classList.add('is-active');
+    }, 800);
+  } else {
+    opt.classList.add('is-wrong');
+    if (feedback) {
+      feedback.textContent = 'Tente novamente ❤️';
+      feedback.className = 'quiz-feedback is-wrong';
+    }
+  }
+}
+
+
+/* ── CAROUSEL (Slide 5 — Momentos Favoritos) ─────────── */
+let carouselInterval = null;
+let carouselIndex = 0;
+
+function activateCarousel() {
+  const slides = document.querySelectorAll('.carousel-slide');
+  const dots = document.querySelectorAll('.carousel-dot');
+  if (slides.length === 0) return;
+
+  // Reset
+  carouselIndex = 0;
+  updateCarousel(slides, dots);
+
+  // Clear existing interval
+  if (carouselInterval) clearInterval(carouselInterval);
+
+  // Auto-play every 3.5 seconds
+  carouselInterval = setInterval(() => {
+    carouselIndex = (carouselIndex + 1) % slides.length;
+    updateCarousel(slides, dots);
+  }, 3500);
+}
+
+function updateCarousel(slides, dots) {
+  slides.forEach((s, i) => {
+    s.classList.toggle('is-active', i === carouselIndex);
+  });
+  dots.forEach((d, i) => {
+    d.classList.toggle('is-active', i === carouselIndex);
+  });
+  const counter = document.getElementById('carousel-counter');
+  if (counter) counter.textContent = `${carouselIndex + 1} / ${slides.length}`;
+}
+
+function initCarousel() {
+  const wrap = document.querySelector('.carousel-wrap');
+  if (!wrap) return;
+
+  // Click/tap to advance
+  wrap.addEventListener('click', () => {
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.carousel-dot');
+    carouselIndex = (carouselIndex + 1) % slides.length;
+    updateCarousel(slides, dots);
+
+    // Reset autoplay timer
+    if (carouselInterval) clearInterval(carouselInterval);
+    carouselInterval = setInterval(() => {
+      carouselIndex = (carouselIndex + 1) % slides.length;
+      updateCarousel(slides, dots);
+    }, 3500);
+  });
+
+  // Dot clicks
+  document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+    dot.addEventListener('click', (e) => {
+      e.stopPropagation();
+      carouselIndex = i;
+      const slides = document.querySelectorAll('.carousel-slide');
+      const dots = document.querySelectorAll('.carousel-dot');
+      updateCarousel(slides, dots);
+
+      if (carouselInterval) clearInterval(carouselInterval);
+      carouselInterval = setInterval(() => {
+        carouselIndex = (carouselIndex + 1) % slides.length;
+        updateCarousel(slides, dots);
+      }, 3500);
+    });
+  });
+}
 
 
 /* ── 21. INIT ─────────────────────────────────────────── */
@@ -886,6 +993,12 @@ function init() {
 
   /* Music player */
   initMusicPlayer();
+
+  /* Quiz */
+  initQuiz();
+
+  /* Carousel */
+  initCarousel();
 
   /* Lightbox close */
   if (dom.lbOverlay) dom.lbOverlay.addEventListener('click', closeLightbox);
