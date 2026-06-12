@@ -186,45 +186,52 @@
             2. O <img> já referencia os arquivos — ao adicionar a foto,
                ela aparecerá automaticamente sobre o placeholder colorido.
           -->
-          <div class="gallery-h" id="gallery-beginning">
-
-            <div class="photo-card" onclick="openLightbox('assets/images/beginning-1.jpg','02/03/2024 — O dia que tudo começou')">
-              <!-- FOTO: assets/images/beginning-1.jpg -->
-              <div class="photo-inner" style="--ph-color-a:#F5C2D7;--ph-color-b:#C9A0BF;">
-                <img src="assets/images/beginning-1.jpg" alt="Como tudo começou — foto 1" loading="lazy" class="photo-img" onerror="this.style.display='none'">
-                <div class="photo-ph"><span>📸</span><small>beginning-1.jpg</small></div>
+                    <div class="marquee-wrap">
+            <div class="marquee-track">
+              <!-- Item 1 -->
+              <div class="photo-card" onclick="openLightbox('assets/images/beginning-1.jpg','O dia que tudo começou')">
+                <div class="photo-inner" style="--ph-color-a:#F5C2D7;--ph-color-b:#C9A0BF;">
+                  <img src="assets/images/beginning-1.jpg" alt="Foto 1" loading="lazy" class="photo-img" onerror="this.style.display='none'">
+                  <div class="photo-ph"><span>📸</span></div>
+                </div>
               </div>
-              <p class="photo-cap">02/03/2024</p>
-            </div>
-
-            <div class="photo-card" onclick="openLightbox('assets/images/beginning-2.jpg','O início da nossa história')">
-              <!-- FOTO: assets/images/beginning-2.jpg -->
-              <div class="photo-inner" style="--ph-color-a:#C9A0BF;--ph-color-b:#8B6E9F;">
-                <img src="assets/images/beginning-2.jpg" alt="Como tudo começou — foto 2" loading="lazy" class="photo-img" onerror="this.style.display='none'">
-                <div class="photo-ph"><span>📸</span><small>beginning-2.jpg</small></div>
+              <!-- Item 2 -->
+              <div class="photo-card" onclick="openLightbox('assets/images/beginning-2.jpg','O início da nossa história')">
+                <div class="photo-inner" style="--ph-color-a:#C9A0BF;--ph-color-b:#8B6E9F;">
+                  <img src="assets/images/beginning-2.jpg" alt="Foto 2" loading="lazy" class="photo-img" onerror="this.style.display='none'">
+                  <div class="photo-ph"><span>📸</span></div>
+                </div>
               </div>
-              <p class="photo-cap">O início</p>
-            </div>
-
-            <div class="photo-card" onclick="openLightbox('assets/images/beginning-3.jpg','Aquele dia especial')">
-              <!-- FOTO: assets/images/beginning-3.jpg -->
-              <div class="photo-inner" style="--ph-color-a:#8B6E9F;--ph-color-b:#5A3D7A;">
-                <img src="assets/images/beginning-3.jpg" alt="Como tudo começou — foto 3" loading="lazy" class="photo-img" onerror="this.style.display='none'">
-                <div class="photo-ph"><span>📸</span><small>beginning-3.jpg</small></div>
+              <!-- Item 3 -->
+              <div class="photo-card" onclick="openLightbox('assets/images/beginning-3.jpg','Aquele dia especial')">
+                <div class="photo-inner" style="--ph-color-a:#8B6E9F;--ph-color-b:#5A3D7A;">
+                  <img src="assets/images/beginning-3.jpg" alt="Foto 3" loading="lazy" class="photo-img" onerror="this.style.display='none'">
+                  <div class="photo-ph"><span>📸</span></div>
+                </div>
               </div>
-              <p class="photo-cap">Aquele dia</p>
-            </div>
 
-            <div class="photo-card" onclick="openLightbox('assets/images/beginning-4.jpg','A primeira vez que ficamos juntos')">
-              <!-- FOTO: assets/images/beginning-4.jpg -->
-              <div class="photo-inner" style="--ph-color-a:#E8A0C0;--ph-color-b:#F5C2D7;">
-                <img src="assets/images/beginning-4.jpg" alt="Como tudo começou — foto 4" loading="lazy" class="photo-img" onerror="this.style.display='none'">
-                <div class="photo-ph"><span>📸</span><small>beginning-4.jpg</small></div>
+              <!-- Duplicate for seamless scroll -->
+              <div class="photo-card" onclick="openLightbox('assets/images/beginning-1.jpg','O dia que tudo começou')">
+                <div class="photo-inner" style="--ph-color-a:#F5C2D7;--ph-color-b:#C9A0BF;">
+                  <img src="assets/images/beginning-1.jpg" alt="Foto 1" loading="lazy" class="photo-img" onerror="this.style.display='none'">
+                  <div class="photo-ph"><span>📸</span></div>
+                </div>
               </div>
-              <p class="photo-cap">Juntos</p>
+              <div class="photo-card" onclick="openLightbox('assets/images/beginning-2.jpg','O início da nossa história')">
+                <div class="photo-inner" style="--ph-color-a:#C9A0BF;--ph-color-b:#8B6E9F;">
+                  <img src="assets/images/beginning-2.jpg" alt="Foto 2" loading="lazy" class="photo-img" onerror="this.style.display='none'">
+                  <div class="photo-ph"><span>📸</span></div>
+                </div>
+              </div>
+              <div class="photo-card" onclick="openLightbox('assets/images/beginning-3.jpg','Aquele dia especial')">
+                <div class="photo-inner" style="--ph-color-a:#8B6E9F;--ph-color-b:#5A3D7A;">
+                  <img src="assets/images/beginning-3.jpg" alt="Foto 3" loading="lazy" class="photo-img" onerror="this.style.display='none'">
+                  <div class="photo-ph"><span>📸</span></div>
+                </div>
+              </div>
             </div>
-
-          </div><!-- /gallery-h -->
+          </div>
+          <p class="beginning-text">Nossos primeiros dates</p>
         </div>
       </section>
 
