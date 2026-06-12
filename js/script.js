@@ -85,7 +85,7 @@ const MUSIC_SRC = 'assets/music/lover.mp3';
 const DATE_NAMORO    = new Date(2024, 4, 17, 0, 0, 0);  // 17/05/2024
 const DATE_PRIMEIRO  = new Date(2024, 2, 2, 0, 0, 0);   // 02/03/2024
 
-const TOTAL_SLIDES = 11;  // Slides 0 a 10 (Telas 2 a 12)
+const TOTAL_SLIDES = 9;   // Slides 0 a 8 (Telas 2 a 10)
 
 
 /* ── 2. ESTADO ────────────────────────────────────────── */
@@ -168,13 +168,7 @@ const dom = {
   mmClose:        $('mm-close'),
   mmBody:         $('mm-body'),
 
-  // Video Modal
-  videoModal:     $('video-modal'),
-  vmOverlay:      $('vm-overlay'),
-  vmClose:        $('vm-close'),
-  modalVideo:     $('modal-video'),
-  modalVideoSrc:  $('modal-video-src'),
-  vmTitle:        $('vm-title-text'),
+
 };
 
 
@@ -460,9 +454,9 @@ function activateSlide(idx) {
   switch(idx) {
     case 0: activateValentines(); break;
     case 1: activateCounter();    break;
-    case 8: activateStarCanvas(); break;
-    case 9: activateTransition(); break;
-    case 10: activateDeclaration(); break;
+    case 6: activateStarCanvas(); break;
+    case 7: activateTransition(); break;
+    case 8: activateDeclaration(); break;
   }
 }
 
@@ -799,14 +793,37 @@ function closeLightbox() {
 
 
 /* ── 16. MEMORY MODAL ─────────────────────────────────── */
+function handleMemoryPhotoError(imgEl, emoji) {
+  const parent = imgEl.parentElement;
+  if (!parent) return;
+  parent.innerHTML = `
+    <div class="mm-photo-placeholder">
+      <span class="mm-ph-icon">${emoji || '📸'}</span>
+      <span class="mm-ph-text">Foto indisponível no momento</span>
+    </div>
+  `;
+}
+
 function openMemoryModal(mem) {
   if (!mem || !dom.memoryModal) return;
   dom.mmBody.innerHTML = `
-    <div class="mm-emoji">${mem.emoji}</div>
-    <p class="mm-date">${mem.date}</p>
-    <h3 class="mm-title">${mem.title}</h3>
-    <p class="mm-text">${mem.text}</p>
-    ${mem.photo ? `<img src="${mem.photo}" class="mm-photo" alt="${mem.title}" onerror="this.style.display='none'">` : ''}
+    <div class="mm-photo-wrap">
+      ${mem.photo ? 
+        `<img src="${mem.photo}" class="mm-photo" alt="${mem.title}" onerror="handleMemoryPhotoError(this, '${mem.emoji || '📸'}')">` : 
+        `<div class="mm-photo-placeholder">
+          <span class="mm-ph-icon">${mem.emoji || '📸'}</span>
+          <span class="mm-ph-text">Sem foto para esta memória</span>
+        </div>`
+      }
+    </div>
+    <div class="mm-info-wrap">
+      <div class="mm-meta">
+        <span class="mm-emoji-badge">${mem.emoji}</span>
+        <span class="mm-date-badge">${mem.date}</span>
+      </div>
+      <h3 class="mm-title">${mem.title}</h3>
+      <p class="mm-text">${mem.text}</p>
+    </div>
   `;
   dom.memoryModal.classList.remove('is-hidden');
   document.body.style.overflow = 'hidden';
@@ -816,42 +833,6 @@ function closeMemoryModal() {
   if (!dom.memoryModal) return;
   dom.memoryModal.classList.add('is-hidden');
   document.body.style.overflow = '';
-}
-
-
-/* ── 17. VIDEO MODAL ─────────────────────────────────── */
-function openVideoModal(src, title) {
-  if (!src || !dom.videoModal) return;
-  dom.modalVideoSrc.src = src;
-  dom.modalVideo.load();
-  dom.vmTitle.textContent = title || '';
-  dom.videoModal.classList.remove('is-hidden');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeVideoModal() {
-  if (!dom.videoModal) return;
-  dom.modalVideo.pause();
-  dom.modalVideoSrc.src = '';
-  dom.videoModal.classList.add('is-hidden');
-  document.body.style.overflow = '';
-}
-
-
-/* ── 18. VIDEO CARDS (inline play) ──────────────────── */
-function initVideoCards() {
-  const overlays = document.querySelectorAll('.video-play-overlay');
-  overlays.forEach(overlay => {
-    const idx = parseInt(overlay.dataset.vidIdx, 10);
-    const videoEl = document.getElementById(`video-el-${idx}`);
-    if (!videoEl) return;
-
-    overlay.addEventListener('click', () => {
-      overlay.classList.add('is-hidden');
-      videoEl.controls = true;
-      videoEl.play().catch(() => {});
-    });
-  });
 }
 
 
@@ -866,7 +847,7 @@ function onResize() {
   });
 
   // Resize canvas
-  if (dom.starCanvas && state.currentSlide === 8) {
+  if (dom.starCanvas && state.currentSlide === 6) {
     dom.starCanvas.width  = dom.starCanvas.offsetWidth;
     dom.starCanvas.height = dom.starCanvas.offsetHeight;
     activateStarCanvas();
@@ -878,10 +859,9 @@ function onResize() {
 /* Funções chamadas pelo HTML onclick */
 window.openLightbox   = openLightbox;
 window.closeLightbox  = closeLightbox;
-window.openVideoModal = openVideoModal;
-window.closeVideoModal = closeVideoModal;
 window.openMemoryModal = openMemoryModal;
 window.closeMemoryModal = closeMemoryModal;
+window.handleMemoryPhotoError = handleMemoryPhotoError;
 
 
 /* ── 21. INIT ─────────────────────────────────────────── */
@@ -907,9 +887,6 @@ function init() {
   /* Music player */
   initMusicPlayer();
 
-  /* Video inline cards */
-  initVideoCards();
-
   /* Lightbox close */
   if (dom.lbOverlay) dom.lbOverlay.addEventListener('click', closeLightbox);
   if (dom.lbClose)   dom.lbClose.addEventListener('click', closeLightbox);
@@ -917,10 +894,6 @@ function init() {
   /* Memory modal close */
   if (dom.mmOverlay) dom.mmOverlay.addEventListener('click', closeMemoryModal);
   if (dom.mmClose)   dom.mmClose.addEventListener('click', closeMemoryModal);
-
-  /* Video modal close */
-  if (dom.vmOverlay) dom.vmOverlay.addEventListener('click', closeVideoModal);
-  if (dom.vmClose)   dom.vmClose.addEventListener('click', closeVideoModal);
 
   /* Resize handler */
   window.addEventListener('resize', onResize);

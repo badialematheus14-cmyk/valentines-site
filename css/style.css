@@ -441,21 +441,7 @@ button {
     linear-gradient(135deg, #120a1a 0%, #0F172A 60%, #1a0a12 100%);
 }
 
-/* Slide 5 — Travels */
-.bg-travel {
-  background:
-    radial-gradient(ellipse 80% 60% at 30% 70%, rgba(45,89,134,0.3) 0%, transparent 60%),
-    linear-gradient(135deg, #0a1520 0%, #0F172A 60%, #0a2015 100%);
-}
-
-/* Slide 6 — Videos */
-.bg-cinema {
-  background:
-    radial-gradient(ellipse 60% 40% at 50% 40%, rgba(30,20,50,0.8) 0%, transparent 70%),
-    linear-gradient(160deg, #08060e 0%, #0F172A 100%);
-}
-
-/* Slide 7 — Music (Lover palette) */
+/* Slide 5 — Music (Lover palette) */
 .bg-music {
   background:
     radial-gradient(ellipse 100% 100% at 50% 0%,   rgba(245,194,215,0.25) 0%, transparent 60%),
@@ -463,17 +449,17 @@ button {
     linear-gradient(160deg, #0d0a18 0%, #0F172A 50%, #0a0d18 100%);
 }
 
-/* Slide 8 — Stars */
+/* Slide 6 — Stars */
 .bg-stars {
   background: linear-gradient(160deg, #03040e 0%, #080b1a 50%, #050812 100%);
 }
 
-/* Slide 9 — Transition */
+/* Slide 7 — Transition */
 .bg-transition {
   background: radial-gradient(ellipse 80% 80% at 50% 50%, #110a1e 0%, #050508 100%);
 }
 
-/* Slide 10 — Declaration */
+/* Slide 8 — Declaration */
 .bg-declaration {
   background:
     radial-gradient(ellipse 70% 60% at 50% 50%, rgba(245,194,215,0.08) 0%, transparent 70%),
@@ -795,152 +781,7 @@ button {
 
 
 /* ══════════════════════════════════════════════════════════
-   SLIDE 5 — VIAGENS (Pinterest grid)
-   ══════════════════════════════════════════════════════════ */
-.pinterest-grid {
-  display: flex;
-  gap: 0.8rem;
-  overflow-y: auto;
-  padding-bottom: 1rem;
-  max-height: calc(100dvh - 13rem);
-  scrollbar-width: none;
-}
-.pinterest-grid::-webkit-scrollbar { display: none; }
-.pin-col {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-}
-.pin-item {
-  cursor: pointer;
-  position: relative;
-}
-.pin-item .photo-inner { aspect-ratio: 3/4; }
-.pin-tall { height: 280px; aspect-ratio: unset !important; }
-.pin-medium { height: 180px; aspect-ratio: unset !important; }
-.pin-label {
-  font-size: 0.72rem;
-  color: rgba(255,255,255,0.45);
-  padding: 0.3rem 0.2rem 0;
-  letter-spacing: 0.05em;
-}
-.video-play-badge {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 3;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.2);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-  transition: background 0.3s, transform 0.2s;
-}
-.pin-video:hover .video-play-badge {
-  background: rgba(245,194,215,0.3);
-  transform: translate(-50%, -50%) scale(1.1);
-}
-
-
-/* ══════════════════════════════════════════════════════════
-   SLIDE 6 — VÍDEOS
-   ══════════════════════════════════════════════════════════ */
-.video-cards-wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  overflow-y: auto;
-  max-height: calc(100dvh - 12rem);
-  padding-bottom: 1rem;
-  scrollbar-width: none;
-}
-.video-cards-wrap::-webkit-scrollbar { display: none; }
-
-.video-card {
-  border-radius: var(--radius-card);
-  overflow: hidden;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
-  transition: transform 0.3s var(--ease-bounce);
-}
-.video-card:hover { transform: translateY(-3px); }
-.video-thumb-wrap {
-  position: relative;
-  aspect-ratio: 16/9;
-  overflow: hidden;
-  background: #08060e;
-}
-.video-el {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.video-ph-icon {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.5rem;
-  color: rgba(255,255,255,0.15);
-  pointer-events: none;
-  z-index: 1;
-}
-.video-play-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0,0,0,0.35);
-  cursor: pointer;
-  transition: background 0.3s;
-}
-.video-play-overlay:hover { background: rgba(0,0,0,0.2); }
-.video-play-overlay.is-hidden { display: none; }
-.big-play {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1.5px solid rgba(255,255,255,0.35);
-  color: var(--white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.2s var(--ease-bounce), background 0.3s;
-}
-.big-play:hover {
-  transform: scale(1.12);
-  background: rgba(245,194,215,0.25);
-}
-.video-card-info {
-  padding: 0.9rem 1rem;
-}
-.video-title-lbl {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--white);
-  margin-bottom: 0.2rem;
-}
-.video-date-lbl {
-  font-size: 0.75rem;
-  color: rgba(255,255,255,0.35);
-}
-
-
-/* ══════════════════════════════════════════════════════════
-   SLIDE 7 — MUSIC PLAYER (Lover)
+   SLIDE 5 — MUSIC PLAYER (Lover)
    ══════════════════════════════════════════════════════════ */
 .music-ambient-blur {
   position: absolute;
@@ -1113,7 +954,7 @@ button {
 
 
 /* ══════════════════════════════════════════════════════════
-   SLIDE 8 — CÉU ESTRELADO
+   SLIDE 6 — CÉU ESTRELADO
    ══════════════════════════════════════════════════════════ */
 .star-canvas {
   position: absolute;
@@ -1140,7 +981,7 @@ button {
 
 
 /* ══════════════════════════════════════════════════════════
-   SLIDE 9 — TRANSIÇÃO
+   SLIDE 7 — TRANSIÇÃO
    ══════════════════════════════════════════════════════════ */
 .transition-content {
   text-align: center;
@@ -1192,7 +1033,7 @@ button {
 
 
 /* ══════════════════════════════════════════════════════════
-   SLIDE 10 — DECLARAÇÃO FINAL
+   SLIDE 8 — DECLARAÇÃO FINAL
    ══════════════════════════════════════════════════════════ */
 .decl-particles {
   position: absolute;
@@ -1323,7 +1164,7 @@ button {
 
 
 /* ══════════════════════════════════════════════════════════
-   MEMORY MODAL
+   MEMORY MODAL (Premium Polaroid & Metadata layout)
    ══════════════════════════════════════════════════════════ */
 .memory-modal {
   position: fixed;
@@ -1338,123 +1179,139 @@ button {
 .mm-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.7);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  background: rgba(8, 10, 24, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   cursor: pointer;
 }
 .mm-inner {
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 500px;
-  background: rgba(15,23,42,0.95);
-  border: 1px solid rgba(245,194,215,0.15);
-  border-radius: var(--radius-card) var(--radius-card) 0 0;
-  padding: 2rem 1.5rem calc(var(--safe-bottom) + 2rem);
-  animation: slideUpModal 0.4s var(--ease-out);
+  max-width: 460px;
+  background: rgba(15, 23, 42, 0.96);
+  border: 1px solid rgba(245, 194, 215, 0.2);
+  border-radius: 24px 24px 0 0;
+  padding: 2.2rem 1.6rem calc(var(--safe-bottom) + 1.8rem);
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.6), 0 0 50px rgba(245, 194, 215, 0.08);
+  animation: slideUpModal 0.45s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .mm-close {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 1.2rem;
+  right: 1.2rem;
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.08);
-  color: rgba(255,255,255,0.6);
-  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.95rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.2s;
+  transition: background 0.2s, transform 0.2s;
+  z-index: 5;
 }
-.mm-close:hover { background: rgba(255,255,255,0.15); }
-.mm-body { text-align: center; }
-.mm-emoji { font-size: 2.5rem; margin-bottom: 0.8rem; }
-.mm-date {
-  font-size: 0.72rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--rose);
-  margin-bottom: 0.5rem;
-}
-.mm-title {
-  font-family: var(--font-serif);
-  font-size: 1.3rem;
-  font-weight: 600;
+.mm-close:hover {
+  background: rgba(245, 194, 215, 0.25);
   color: var(--white);
-  margin-bottom: 0.8rem;
+  transform: rotate(90deg);
 }
-.mm-text {
-  font-size: 0.9rem;
-  color: rgba(255,255,255,0.55);
-  line-height: 1.7;
+.mm-body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Novo container da imagem */
+.mm-photo-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 1.4rem;
+  position: relative;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.4);
 }
 .mm-photo {
   width: 100%;
-  border-radius: var(--radius-card);
-  margin-top: 1rem;
+  height: 100%;
   object-fit: cover;
-  max-height: 200px;
+  animation: fadeIn 0.4s var(--ease-out);
 }
 
-
-/* ══════════════════════════════════════════════════════════
-   VIDEO MODAL
-   ══════════════════════════════════════════════════════════ */
-.video-modal {
-  position: fixed;
+/* Placeholder elegante */
+.mm-photo-placeholder {
+  position: absolute;
   inset: 0;
-  z-index: 200;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, rgba(245, 194, 215, 0.08) 0%, rgba(139, 110, 159, 0.08) 100%);
+  border: 1.5px dashed rgba(245, 194, 215, 0.25);
+  border-radius: 16px;
   padding: 1rem;
-  animation: fadeIn 0.3s var(--ease-out);
 }
-.vm-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.92);
-  cursor: pointer;
+.mm-ph-icon {
+  font-size: 2.4rem;
+  animation: heartPulse 2.5s ease-in-out infinite;
+  filter: drop-shadow(0 0 8px rgba(245, 194, 215, 0.3));
 }
-.vm-inner {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  max-width: 500px;
-  animation: scaleIn 0.35s var(--ease-bounce);
+.mm-ph-text {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.04em;
+  font-weight: 400;
+  text-align: center;
 }
-.vm-close {
-  position: absolute;
-  top: -40px;
-  right: 0;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.15);
-  color: var(--white);
+
+/* Informações */
+.mm-info-wrap {
+  text-align: left;
+}
+.mm-meta {
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
-  transition: background 0.2s, transform 0.2s;
+  gap: 0.6rem;
+  margin-bottom: 0.8rem;
 }
-.vm-close:hover { background: rgba(245,194,215,0.3); transform: scale(1.1); }
-.modal-video-el {
-  width: 100%;
-  border-radius: var(--radius-card);
-  max-height: 75dvh;
-  object-fit: contain;
-  background: #000;
+.mm-emoji-badge {
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.07);
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
-.vm-title-text {
-  text-align: center;
-  margin-top: 0.8rem;
-  font-size: 0.85rem;
-  color: rgba(255,255,255,0.45);
+.mm-date-badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--rose);
+  background: rgba(245, 194, 215, 0.1);
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid rgba(245, 194, 215, 0.2);
 }
+.mm-title {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.6rem;
+  line-height: 1.3;
+}
+.mm-text {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/* Modal de Vídeo Removido */
 
 
 /* ══════════════════════════════════════════════════════════

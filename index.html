@@ -355,209 +355,14 @@
       </section>
 
 
-      <!-- ══════════════════════════════════════════════════════
-           SLIDE 5 (Tela 7) — VIAGENS
-           Fotos: assets/images/travel-1.jpg, travel-2.jpg, travel-3.jpg
-           Thumbs de vídeo: assets/images/travel-thumb-1.jpg
-           Vídeo: assets/videos/travel-1.mp4
-      ════════════════════════════════════════════════════════ -->
-      <section class="slide" id="slide-travels" data-index="5" aria-label="Nossas viagens">
-        <div class="slide-bg bg-travel"></div>
-        <div class="slide-inner">
-          <header class="slide-header">
-            <p class="eyebrow">aventuras juntos</p>
-            <h2 class="slide-title">Nossas<br>Viagens</h2>
-          </header>
-
-          <!--
-            GRID PINTEREST — VIAGENS
-            Para fotos: copie para assets/images/travel-X.jpg
-            Para vídeos: copie para assets/videos/travel-X.mp4
-                         e o thumbnail para assets/images/travel-thumb-X.jpg
-            Cards de vídeo têm um ícone ▶ — ao clicar abrem o modal de vídeo.
-          -->
-          <div class="pinterest-grid">
-
-            <div class="pin-col">
-
-              <div class="pin-item" onclick="openLightbox('assets/images/travel-1.jpg','Nossa viagem')">
-                <!-- FOTO: assets/images/travel-1.jpg -->
-                <div class="photo-inner pin-tall" style="--ph-color-a:#1a3a5c;--ph-color-b:#2d5986;">
-                  <img src="assets/images/travel-1.jpg" alt="Viagem 1" loading="lazy" class="photo-img" onerror="this.style.display='none'">
-                  <div class="photo-ph"><span>📍</span><small>travel-1.jpg</small></div>
-                </div>
-                <p class="pin-label">Destino 1</p>
-              </div>
-
-              <div class="pin-item" onclick="openLightbox('assets/images/travel-2.jpg','Mais aventuras')">
-                <!-- FOTO: assets/images/travel-2.jpg -->
-                <div class="photo-inner" style="--ph-color-a:#3d2a1a;--ph-color-b:#6b4e2a;">
-                  <img src="assets/images/travel-2.jpg" alt="Viagem 2" loading="lazy" class="photo-img" onerror="this.style.display='none'">
-                  <div class="photo-ph"><span>📍</span><small>travel-2.jpg</small></div>
-                </div>
-                <p class="pin-label">Destino 2</p>
-              </div>
-
-            </div><!-- /pin-col -->
-
-            <div class="pin-col">
-
-              <!--
-                VÍDEO DE VIAGEM:
-                Substitua travel-thumb-1.jpg pelo thumbnail e travel-1.mp4 pelo vídeo.
-              -->
-              <div class="pin-item pin-video" onclick="openVideoModal('assets/videos/travel-1.mp4','Nossa aventura em vídeo')">
-                <!-- VIDEO THUMB: assets/images/travel-thumb-1.jpg -->
-                <div class="photo-inner" style="--ph-color-a:#2d1b3d;--ph-color-b:#4a2d6f;">
-                  <img src="assets/images/travel-thumb-1.jpg" alt="Vídeo de viagem" loading="lazy" class="photo-img" onerror="this.style.display='none'">
-                  <div class="photo-ph"><span>🎬</span><small>travel-thumb-1.jpg</small></div>
-                  <div class="video-play-badge">▶</div>
-                </div>
-                <p class="pin-label">Vídeo especial</p>
-              </div>
-
-              <div class="pin-item" onclick="openLightbox('assets/images/travel-3.jpg','Lugar especial')">
-                <!-- FOTO: assets/images/travel-3.jpg -->
-                <div class="photo-inner pin-medium" style="--ph-color-a:#1a3d2a;--ph-color-b:#2a6b4e;">
-                  <img src="assets/images/travel-3.jpg" alt="Viagem 3" loading="lazy" class="photo-img" onerror="this.style.display='none'">
-                  <div class="photo-ph"><span>📍</span><small>travel-3.jpg</small></div>
-                </div>
-                <p class="pin-label">Destino 3</p>
-              </div>
-
-            </div><!-- /pin-col -->
-          </div><!-- /pinterest-grid -->
-        </div>
-      </section>
 
 
       <!-- ══════════════════════════════════════════════════════
-           SLIDE 6 (Tela 8) — VÍDEOS
-           Vídeos: assets/videos/video-1.mp4, video-2.mp4, video-3.mp4
-           Thumbnails: assets/images/video-thumb-1.jpg, etc.
-      ════════════════════════════════════════════════════════ -->
-      <section class="slide" id="slide-videos" data-index="6" aria-label="Nossos vídeos">
-        <div class="slide-bg bg-cinema"></div>
-        <div class="slide-inner">
-          <header class="slide-header">
-            <p class="eyebrow">momentos em movimento</p>
-            <h2 class="slide-title">Nossos<br>Vídeos</h2>
-          </header>
-
-          <!--
-            VÍDEOS
-            Para cada vídeo:
-            1. Adicione o arquivo .mp4 em assets/videos/video-X.mp4
-            2. Adicione o thumbnail em assets/images/video-thumb-X.jpg
-            3. Atualize o título e a data abaixo de cada card.
-            O player nativo do navegador será usado — funciona em todos os celulares.
-          -->
-          <div class="video-cards-wrap">
-
-            <div class="video-card">
-              <div class="video-thumb-wrap">
-                <!--
-                  VÍDEO 1
-                  src: assets/videos/video-1.mp4
-                  poster: assets/images/video-thumb-1.jpg
-                -->
-                <video
-                  class="video-el"
-                  poster="assets/images/video-thumb-1.jpg"
-                  preload="none"
-                  playsinline
-                  id="video-el-0">
-                  <source src="assets/videos/video-1.mp4" type="video/mp4">
-                </video>
-                <div class="video-ph-icon">🎬</div>
-                <div class="video-play-overlay" data-vid-idx="0">
-                  <button class="big-play" aria-label="Reproduzir vídeo 1">
-                    <svg viewBox="0 0 24 24" width="40" height="40">
-                      <polygon points="5 3 19 12 5 21 5 3" fill="currentColor"/>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              <div class="video-card-info">
-                <!-- Edite o título e data do vídeo 1 abaixo -->
-                <p class="video-title-lbl">Vídeo especial 1</p>
-                <p class="video-date-lbl"><!-- ex: Dezembro 2024 --></p>
-              </div>
-            </div>
-
-            <div class="video-card">
-              <div class="video-thumb-wrap">
-                <!--
-                  VÍDEO 2
-                  src: assets/videos/video-2.mp4
-                  poster: assets/images/video-thumb-2.jpg
-                -->
-                <video
-                  class="video-el"
-                  poster="assets/images/video-thumb-2.jpg"
-                  preload="none"
-                  playsinline
-                  id="video-el-1">
-                  <source src="assets/videos/video-2.mp4" type="video/mp4">
-                </video>
-                <div class="video-ph-icon">🎬</div>
-                <div class="video-play-overlay" data-vid-idx="1">
-                  <button class="big-play" aria-label="Reproduzir vídeo 2">
-                    <svg viewBox="0 0 24 24" width="40" height="40">
-                      <polygon points="5 3 19 12 5 21 5 3" fill="currentColor"/>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              <div class="video-card-info">
-                <!-- Edite o título e data do vídeo 2 abaixo -->
-                <p class="video-title-lbl">Vídeo especial 2</p>
-                <p class="video-date-lbl"><!-- ex: Fevereiro 2025 --></p>
-              </div>
-            </div>
-
-            <div class="video-card">
-              <div class="video-thumb-wrap">
-                <!--
-                  VÍDEO 3
-                  src: assets/videos/video-3.mp4
-                  poster: assets/images/video-thumb-3.jpg
-                -->
-                <video
-                  class="video-el"
-                  poster="assets/images/video-thumb-3.jpg"
-                  preload="none"
-                  playsinline
-                  id="video-el-2">
-                  <source src="assets/videos/video-3.mp4" type="video/mp4">
-                </video>
-                <div class="video-ph-icon">🎬</div>
-                <div class="video-play-overlay" data-vid-idx="2">
-                  <button class="big-play" aria-label="Reproduzir vídeo 3">
-                    <svg viewBox="0 0 24 24" width="40" height="40">
-                      <polygon points="5 3 19 12 5 21 5 3" fill="currentColor"/>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              <div class="video-card-info">
-                <!-- Edite o título e data do vídeo 3 abaixo -->
-                <p class="video-title-lbl">Vídeo especial 3</p>
-                <p class="video-date-lbl"><!-- ex: Maio 2025 --></p>
-              </div>
-            </div>
-
-          </div><!-- /video-cards-wrap -->
-        </div>
-      </section>
-
-
-      <!-- ══════════════════════════════════════════════════════
-           SLIDE 7 (Tela 9) — LOVER (PLAYER DE MÚSICA)
+           SLIDE 5 (Tela 6) — LOVER (PLAYER DE MÚSICA)
            Música: assets/music/lover.mp3
            Capa: assets/images/lover-cover.jpg (500×500px)
       ════════════════════════════════════════════════════════ -->
-      <section class="slide" id="slide-music" data-index="7" aria-label="Nossa música — Lover">
+      <section class="slide" id="slide-music" data-index="5" aria-label="Nossa música — Lover">
         <div class="slide-bg bg-music"></div>
         <div class="music-ambient-blur" id="music-ambient"></div>
         <div class="slide-center">
@@ -643,11 +448,11 @@
 
 
       <!-- ══════════════════════════════════════════════════════
-           SLIDE 8 (Tela 10) — CÉU ESTRELADO
+           SLIDE 6 (Tela 7) — CÉU ESTRELADO
            Estrelas com memórias: edite o array STAR_MEMORIES em js/script.js
            Fotos das memórias: assets/images/memory-X.jpg
       ════════════════════════════════════════════════════════ -->
-      <section class="slide" id="slide-stars" data-index="8" aria-label="Céu estrelado com memórias">
+      <section class="slide" id="slide-stars" data-index="6" aria-label="Céu estrelado com memórias">
         <div class="slide-bg bg-stars"></div>
         <canvas id="star-canvas" class="star-canvas" aria-hidden="true"></canvas>
         <div class="stars-ui">
@@ -661,9 +466,9 @@
 
 
       <!-- ══════════════════════════════════════════════════════
-           SLIDE 9 (Tela 11) — TRANSIÇÃO
+           SLIDE 7 (Tela 8) — TRANSIÇÃO
       ════════════════════════════════════════════════════════ -->
-      <section class="slide" id="slide-transition" data-index="9" aria-label="Transição">
+      <section class="slide" id="slide-transition" data-index="7" aria-label="Transição">
         <div class="slide-bg bg-transition"></div>
         <div class="slide-center">
           <div class="transition-content">
@@ -682,14 +487,14 @@
 
 
       <!-- ══════════════════════════════════════════════════════
-           SLIDE 10 (Tela 12) — DECLARAÇÃO FINAL
+           SLIDE 8 (Tela 9) — DECLARAÇÃO FINAL
 
            ✏️  PARA PERSONALIZAR:
            Substitua o bloco abaixo pela declaração real.
            Cada <p class="decl-para"> aparecerá com delay gradual.
            Exemplo no comentário abaixo.
       ════════════════════════════════════════════════════════ -->
-      <section class="slide" id="slide-declaration" data-index="10" aria-label="Declaração final">
+      <section class="slide" id="slide-declaration" data-index="8" aria-label="Declaração final">
         <div class="slide-bg bg-declaration"></div>
         <div class="decl-particles" id="decl-particles"></div>
         <div class="slide-center">
@@ -765,19 +570,7 @@
   </div>
 
 
-  <!-- ══════════════════════════════════════════════════════
-       VIDEO MODAL — Player de vídeo em tela cheia
-  ════════════════════════════════════════════════════════ -->
-  <div id="video-modal" class="video-modal is-hidden" role="dialog" aria-modal="true" aria-label="Reproduzir vídeo">
-    <div class="vm-overlay" id="vm-overlay"></div>
-    <div class="vm-inner">
-      <button class="vm-close" id="vm-close" aria-label="Fechar vídeo">✕</button>
-      <video id="modal-video" class="modal-video-el" controls playsinline>
-        <source id="modal-video-src" src="" type="video/mp4">
-      </video>
-      <p id="vm-title-text" class="vm-title-text"></p>
-    </div>
-  </div>
+
 
 
 </div><!-- /app -->
