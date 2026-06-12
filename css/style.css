@@ -1447,10 +1447,13 @@ button {
   overflow: hidden;
   cursor: pointer;
   position: relative;
+  opacity: 0;
+  animation: popIn 0.8s var(--ease-bounce) forwards;
 }
-.gata-item:first-child {
-  grid-row: span 2;
-}
+.gata-item:nth-child(1) { animation-delay: 0.2s; grid-row: span 2; }
+.gata-item:nth-child(2) { animation-delay: 1.7s; }
+.gata-item:nth-child(3) { animation-delay: 3.2s; }
+.gata-item:nth-child(4) { animation-delay: 4.7s; }
 .gata-item .photo-inner {
   width: 100%;
   height: 100%;
@@ -1622,13 +1625,16 @@ button {
   position: absolute;
   inset: 0;
   opacity: 0;
-  transform: scale(1.05);
-  transition: opacity 0.8s var(--ease-smooth), transform 0.8s var(--ease-smooth);
+  transform: translateX(40px) scale(0.85) rotateY(-15deg);
+  filter: blur(5px);
+  transition: all 0.7s var(--ease-bounce);
   z-index: 1;
+  perspective: 1000px;
 }
 .carousel-slide.is-active {
   opacity: 1;
-  transform: scale(1);
+  transform: translateX(0) scale(1) rotateY(0deg);
+  filter: blur(0px);
   z-index: 2;
 }
 .carousel-slide .photo-inner {

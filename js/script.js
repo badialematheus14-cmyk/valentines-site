@@ -901,11 +901,11 @@ function activateCarousel() {
   // Clear existing interval
   if (carouselInterval) clearInterval(carouselInterval);
 
-  // Auto-play every 3.5 seconds
+  // Auto-play every 2.4 seconds
   carouselInterval = setInterval(() => {
     carouselIndex = (carouselIndex + 1) % slides.length;
     updateCarousel(slides, dots);
-  }, 3500);
+  }, 2400);
 }
 
 function updateCarousel(slides, dots) {
@@ -935,7 +935,7 @@ function initCarousel() {
     carouselInterval = setInterval(() => {
       carouselIndex = (carouselIndex + 1) % slides.length;
       updateCarousel(slides, dots);
-    }, 3500);
+    }, 2400);
   });
 
   // Dot clicks
@@ -951,7 +951,7 @@ function initCarousel() {
       carouselInterval = setInterval(() => {
         carouselIndex = (carouselIndex + 1) % slides.length;
         updateCarousel(slides, dots);
-      }, 3500);
+      }, 2400);
     });
   });
 }
